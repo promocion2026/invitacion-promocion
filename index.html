@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Fiesta de Promoción · KINTSUGI 2026</title>
+
+  <!-- Hojas de Estilos (Tailwind CSS 4, Animaciones y Estilos Personalizados) -->
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <meta name="theme-color" content="#1a0208">
+  <meta name="description"
+    content="Invitación digital elegante para la Fiesta de Promoción KINTSUGI 2026. Una noche especial e inolvidable.">
+</head>
+
+<body class="bg-neutral-950 text-slate-100 antialiased min-h-screen selection:bg-rose-900 selection:text-white">
+
+  <!-- =========================================================================
+       A. PORTADA Y SOBRE DE INVITACIÓN (REDISEÑO PREMIUM · EXCLUSIVO DE GALA)
+       ========================================================================= -->
+  <section id="envelopeScreen"
+    class="fixed inset-0 z-50 w-full h-full bg-[#0c0104] flex items-center justify-center p-0 md:p-6 transition-all duration-1000 overflow-hidden">
+
+    <!-- Contenedor de la Tarjeta de Portada de Gala -->
+    <div
+      class="relative w-full h-full max-w-md md:max-w-xl lg:max-w-2xl bg-luxury-cover luxury-texture-overlay luxury-vignette flex flex-col items-center justify-between py-8 md:py-12 px-6 md:px-12 shadow-[0_0_90px_rgba(0,0,0,0.98)] overflow-hidden">
+
+      <!-- Marco Ornamental Perimetral con Filigranas en las 4 Esquinas -->
+      <div class="ornamental-frame" aria-hidden="true"></div>
+      <div class="ornamental-frame-inner" aria-hidden="true"></div>
+
+      <div class="frame-corner frame-corner-tl" aria-hidden="true">
+        <img src="img/decoraciones/filigrana-esquina.svg" alt="" class="w-full h-full object-contain">
+      </div>
+      <div class="frame-corner frame-corner-tr" aria-hidden="true">
+        <img src="img/decoraciones/filigrana-esquina.svg" alt="" class="w-full h-full object-contain">
+      </div>
+      <div class="frame-corner frame-corner-bl" aria-hidden="true">
+        <img src="img/decoraciones/filigrana-esquina.svg" alt="" class="w-full h-full object-contain">
+      </div>
+      <div class="frame-corner frame-corner-br" aria-hidden="true">
+        <img src="img/decoraciones/filigrana-esquina.svg" alt="" class="w-full h-full object-contain">
+      </div>
+
+      <!-- Contenedor de partículas luminosas flotantes exclusivas de la portada -->
+      <div id="coverParticlesContainer" class="absolute inset-0 pointer-events-none z-2 overflow-hidden"
+        aria-hidden="true"></div>
+
+      <!-- ENCABEZADO SUPERIOR REDISEÑADO (Emblema + Título de Gala + Divisor) -->
+      <header class="text-center pt-2 md:pt-3 z-10 anim-intro-crest flex flex-col items-center">
+
+        <!-- Emblema de Fiesta de Promoción Destacado -->
+        <div
+          class="w-20 h-18 md:w-26 md:h-22 mx-auto mb-2 drop-shadow-[0_4px_16px_rgba(223,201,165,0.45)] hover:scale-105 transition-transform duration-500">
+          <img src="img/decoraciones/emblema-graduacion-header.svg" alt="Emblema Fiesta de Promoción KINTSUGI"
+            class="w-full h-full object-contain">
+        </div>
+
+        <!-- Texto Manuscrito Introductorio -->
+        <p class="font-script-subtitle text-2xl md:text-3xl text-champan font-normal tracking-wide drop-shadow">
+          ¡Estás invitado!
+        </p>
+
+        <!-- Título Principal Impactante de Fiesta -->
+        <h2
+          class="font-serif-display text-xl md:text-2xl lg:text-3xl font-bold tracking-[0.14em] md:tracking-[0.18em] uppercase text-foil-gold drop-shadow-lg mt-0.5 mb-1.5">
+          Fiesta de Promoción
+        </h2>
+
+        <!-- Separador Ornamental con Filigrana Dorada -->
+        <div class="w-48 md:w-64 h-3 mx-auto opacity-85">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <!-- Frase Secundaria de Gala -->
+        <p class="font-serif-body italic text-xs md:text-sm tracking-wider text-champan/80 mt-1 drop-shadow-sm">
+          Una noche para recordar · Celebremos juntos este momento especial
+        </p>
+      </header>
+
+      <!-- SOBRE DE INVITACIÓN PROTAGONISTA (Proporciones Premium + Iluminación + Lacre Realista) -->
+      <div class="my-auto py-2 md:py-4 z-10 anim-intro-envelope relative flex items-center justify-center">
+
+        <!-- Halo de Iluminación Suave detrás del Sobre -->
+        <div class="envelope-halo anim-halo-pulse" aria-hidden="true"></div>
+
+        <div id="envelopeWrapper" class="envelope-wrapper relative cursor-pointer group"
+          title="Haz clic para abrir la invitación">
+
+          <!-- Caja del sobre con textura de papel de lujo y bordes biselados -->
+          <div class="envelope-box relative">
+
+            <!-- 1. Fondo interior del sobre (Forro de gala visible al abrir la solapa) -->
+            <div class="envelope-back-svg">
+              <img src="img/sobre/sobre-satin-fondo.svg" alt="" class="w-full h-full object-fill">
+            </div>
+
+            <!-- 2. Tarjeta interior que emerge FÍSICAMENTE desde adentro del sobre con el mensaje -->
+            <div
+              class="envelope-letter inner-card flex flex-col items-center justify-start text-center select-none pointer-events-none p-3.5 md:p-5">
+
+              <!-- Marco fino interior dorado -->
+              <div class="absolute inset-1.5 border border-amber-600/30 rounded pointer-events-none" aria-hidden="true">
+              </div>
+
+              <!-- Icono de fiesta / estrella decorativa -->
+              <div class="w-10 h-10 md:w-12 md:h-12 mb-1.5 opacity-95 drop-shadow-md">
+                <img src="img/decoraciones/icono-fiesta.svg" alt="Fiesta de Promoción"
+                  class="w-full h-full object-contain">
+              </div>
+
+              <!-- Mensaje de la Invitación -->
+              <p class="font-script-subtitle text-xl md:text-2xl text-neutral-800 font-semibold leading-tight">
+                ¡Estás invitado a nuestra
+              </p>
+
+              <p class="font-serif-body italic text-xs md:text-sm text-neutral-600">
+                gran noche de celebración
+              </p>
+
+              <h3
+                class="font-script-title text-3xl md:text-4xl text-rose-950 font-bold leading-none my-1 drop-shadow-xs">
+                Fiesta de Promoción
+              </h3>
+
+              <!-- Separador ornamental -->
+              <div class="w-24 md:w-32 h-1.5 my-1 opacity-80">
+                <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+              </div>
+
+              <!-- Nombre de la Estudiante -->
+              <p class="font-script-title text-2xl md:text-3xl text-rose-900 font-bold leading-tight mt-0.5 drop-shadow-sm">
+                Paloma Martel
+              </p>
+
+              <p
+                class="font-serif-display text-[10px] md:text-xs tracking-wider uppercase text-neutral-800 font-bold mt-0.5">
+                KINTSUGI 2026
+              </p>
+
+              <p class="font-serif-body italic text-[9px] md:text-[11px] text-neutral-600">
+                Una noche especial e inolvidable
+              </p>
+
+            </div>
+
+            <!-- 3. Base del sobre: Bolsillo satinado frontal (Cubre la base de la carta) -->
+            <div class="envelope-pocket-svg">
+              <img src="img/sobre/sobre-satin-bolsillo.svg" alt="Bolsillo satinado del sobre"
+                class="w-full h-full object-fill">
+            </div>
+
+            <!-- 4. Solapa triangular superior satinada con cintas y destello (animada en 3D) -->
+            <div class="envelope-flap-top">
+              <img src="img/sobre/solapa-superior-satin.svg" alt="Solapa superior con cintas"
+                class="w-full h-full object-fill">
+            </div>
+
+            <!-- 5. Broche Joya Central con Gema Facetada y Colas de Lazo (Trigger interactivo) -->
+            <button id="waxSeal" class="wax-seal-btn anim-seal-gleam focus:outline-none z-5"
+              aria-label="Abrir sobre de invitación">
+              <img src="img/sobre/broche-joya.svg" alt="Broche joya de graduación" class="w-full h-full object-contain">
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- INDICACIÓN INFERIOR PARA ABRIR REDISEÑADA (Cinzel + Líneas Decorativas + Indicador) -->
+      <footer class="text-center pb-2 md:pb-3 z-10 anim-intro-cta flex flex-col items-center">
+
+        <!-- Pequeño icono animado flotante hacia el sobre -->
+        <div class="w-4 h-4 md:w-5 md:h-5 mb-1 text-champan/80 anim-float-indicator" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-full h-full">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+          </svg>
+        </div>
+
+        <!-- Botón principal "CLICK PARA ABRIR" con líneas ornamentales -->
+        <div class="open-button-container">
+          <span class="open-button-line" aria-hidden="true"></span>
+          <button id="btnAbrirSobre"
+            class="font-serif-display text-xs md:text-sm lg:text-base font-bold tracking-[0.3em] uppercase text-foil-gold anim-pulse-glow hover:text-white transition-all focus:outline-none py-1 px-3">
+            CLICK PARA ABRIR
+          </button>
+          <span class="open-button-line-right" aria-hidden="true"></span>
+        </div>
+
+        <!-- Frase sutil de invitación debajo del botón -->
+        <p class="font-sans-ui text-[10px] md:text-xs text-champan/70 tracking-widest uppercase mt-1.5 font-light">
+          Abre esta invitación para descubrir los detalles
+        </p>
+      </footer>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       CONTENEDOR PRINCIPAL - DISEÑO MÓVIL Y DE GALA CENTRADO (Luxury Container)
+       ========================================================================= -->
+  <div id="inicio"
+    class="relative w-full max-w-md md:max-w-xl lg:max-w-2xl mx-auto min-h-screen bg-interior-luxury luxury-velvet-texture shadow-[0_0_90px_rgba(0,0,0,0.98)] overflow-hidden flex flex-col justify-between">
+
+    <!-- Orbes de luz ambiental difuminada que se desplazan lentamente en el fondo -->
+    <div class="ambient-orb ambient-orb-1" aria-hidden="true"></div>
+    <div class="ambient-orb ambient-orb-2" aria-hidden="true"></div>
+    <div class="ambient-orb ambient-orb-3" aria-hidden="true"></div>
+
+    <!-- Filigranas ornamentales fijas en las esquinas superiores del interior -->
+    <div class="absolute top-4 left-4 w-10 h-10 opacity-30 pointer-events-none z-1" aria-hidden="true">
+      <img src="img/decoraciones/filigrana-esquina.svg" alt="" class="w-full h-full object-contain">
+    </div>
+    <div class="absolute top-4 right-4 w-10 h-10 opacity-30 pointer-events-none z-1 scale-x-[-1]" aria-hidden="true">
+      <img src="img/decoraciones/filigrana-esquina.svg" alt="" class="w-full h-full object-contain">
+    </div>
+
+    <!-- Contenedor dinámico de destellos brillantes de fondo (sparkles) -->
+    <div id="sparklesContainer" class="absolute inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    </div>
+
+    <!-- =========================================================================
+         CONTENIDO PRINCIPAL DE LA INVITACIÓN
+         ========================================================================= -->
+    <main id="invitationContent"
+      class="relative z-10 flex-1 flex flex-col pointer-events-none opacity-0 transition-opacity duration-700">
+
+      <!-- =======================================================================
+           B. PRESENTACIÓN DE LA PROMOCIÓN / HERO EDITORIAL SECTION
+           ======================================================================= -->
+      <section class="pt-8 pb-6 px-6 relative flex flex-col items-center text-center fade-in-section is-visible">
+
+        <!-- Emblema de Graduación de Honor Superior -->
+        <div
+          class="w-22 h-20 md:w-26 md:h-24 mx-auto mb-3 drop-shadow-[0_6px_22px_rgba(223,201,165,0.55)] hover:scale-105 transition-transform duration-500">
+          <img src="img/decoraciones/emblema-graduacion-header.svg" alt="Graduación de Honor"
+            class="w-full h-full object-contain">
+        </div>
+
+        <!-- Frase de Celebración Introductoria -->
+        <p class="font-script-subtitle text-2xl md:text-3xl text-champan/90 font-normal tracking-wide drop-shadow mb-1">
+          Nuestra gran noche de celebración
+        </p>
+
+        <!-- Emblema Class 2026 en relieve tridimensional cromado y dorado -->
+        <div class="w-44 md:w-52 mx-auto my-2 drop-shadow-[0_6px_22px_rgba(0,0,0,0.85)]">
+          <img src="img/decoraciones/emblema-class.svg" alt="KINTSUGI 2026" class="w-full h-auto object-contain">
+        </div>
+
+        <!-- Nombre Principal de la Promoción en Tipografía de Gala -->
+        <header class="my-2">
+          <p class="font-serif-body italic text-sm md:text-base text-champan/80 tracking-widest mb-0.5">en honor a</p>
+          <h1
+            class="font-script-title text-5xl md:text-6xl lg:text-7xl text-foil-gold font-normal tracking-wide drop-shadow-lg py-1">
+            Paloma Martel
+          </h1>
+          <div
+            class="inline-block mt-1 py-1 px-4 rounded-full bg-neutral-950/40 border border-champan/30 backdrop-blur-xs shadow-md">
+            <p class="font-serif-body text-[11px] md:text-xs tracking-[0.2em] uppercase text-champan font-bold">
+              Promoción KINTSUGI 2026 · Una Noche Especial
+            </p>
+          </div>
+        </header>
+
+        <!-- Divisor Ornamental Dorado -->
+        <div class="w-48 md:w-60 h-3 mx-auto my-3 opacity-80">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <!-- Fotografía Polaroid 1 (Superior derecha, estilo editorial con cinta dorada) -->
+        <div class="w-full flex justify-end pr-2 md:pr-6 mb-3">
+          <figure class="polaroid-editorial w-32 md:w-36 rotate-[4deg] polaroid-float cursor-pointer"
+            style="--rot: 4deg;">
+            <div class="tape-gold-washi-corner" aria-hidden="true"></div>
+            <div class="w-full aspect-[4/5] overflow-hidden bg-neutral-900 rounded-xs">
+              <img src="img/fotografias/foto1.jpg" alt="Promoción KINTSUGI 2026" class="w-full h-full object-cover">
+            </div>
+            <figcaption class="text-[9px] font-script-title text-neutral-800 text-center mt-1.5 font-bold">
+              Paloma Martel · 2026
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Dos Fotografías Polaroid (Estilo referencia, inclinadas frente a frente con cinta dorada) -->
+        <div class="w-full flex justify-center items-center gap-5 md:gap-8 my-3 px-2">
+          <!-- Polaroid 2 (Inclinada a la izquierda) -->
+          <figure class="polaroid-editorial w-34 md:w-40 rotate-[-5deg] polaroid-float cursor-pointer"
+            style="--rot: -5deg;">
+            <div class="tape-gold-washi" aria-hidden="true"></div>
+            <div class="w-full aspect-[4/5] overflow-hidden bg-neutral-900 rounded-xs">
+              <img src="img/fotografias/foto2.jpg" alt="Nuestra gran noche juntos" class="w-full h-full object-cover">
+            </div>
+            <figcaption class="text-[9px] font-script-title text-neutral-800 text-center mt-1.5 font-bold">
+              Momentos inolvidables
+            </figcaption>
+          </figure>
+
+          <!-- Polaroid 3 (Inclinada a la derecha) -->
+          <figure class="polaroid-editorial w-34 md:w-40 rotate-[4deg] polaroid-float cursor-pointer"
+            style="--rot: 4deg; animation-delay: 1.5s;">
+            <div class="tape-gold-washi" aria-hidden="true"></div>
+            <div class="w-full aspect-[4/5] overflow-hidden bg-neutral-900 rounded-xs">
+              <img src="img/fotografias/foto3.jpg" alt="Una noche para recordar" class="w-full h-full object-cover">
+            </div>
+            <figcaption class="text-[9px] font-script-title text-neutral-800 text-center mt-1.5 font-bold">
+              Amistad para siempre
+            </figcaption>
+          </figure>
+        </div>
+
+      </section>
+
+      <!-- =======================================================================
+           C. REPRODUCTOR DE MÚSICA ELEGANTE (Tarjeta Glassmorphism de Lujo)
+           ======================================================================= -->
+      <section class="px-5 md:px-8 py-4 flex flex-col items-center text-center fade-in-section delay-100">
+
+        <!-- Elemento de audio nativo (reemplazable localmente en audio/musica.mp3) -->
+        <audio id="audioPlayer" src="audio/musica.mp3" preload="metadata"></audio>
+
+        <!-- Tarjeta de Cristal Oscuro del Reproductor -->
+        <div class="w-full max-w-sm md:max-w-md player-glass-card p-5 md:p-6 shadow-2xl">
+
+          <!-- Encabezado de la Tarjeta Musical con Vinilo Giratorio -->
+          <div class="flex items-center justify-between border-b border-champan/20 pb-3.5 mb-3">
+            <div class="flex items-center gap-3.5">
+              <div id="musicVinylDisk" class="w-13 h-13 md:w-15 md:h-15 flex-shrink-0 drop-shadow-lg">
+                <img src="img/decoraciones/icono-vinilo.svg" alt="Disco de Vinilo" class="w-full h-full object-contain">
+              </div>
+              <div class="text-left">
+                <p class="font-serif-display text-xs md:text-sm font-bold text-foil-gold tracking-wide">Photograph</p>
+                <p class="font-serif-body italic text-[10px] md:text-[11px] text-champan/70">Ed Sheeran · Canción de la
+                  Promoción KINTSUGI</p>
+              </div>
+            </div>
+            <span
+              class="inline-flex items-center gap-1.5 text-[9px] font-sans-ui uppercase tracking-wider text-champan/80 bg-neutral-900/60 px-2 py-0.5 rounded-full border border-champan/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Audio
+            </span>
+          </div>
+
+          <!-- Visualizador de ondas de sonido animadas (Equalizer Waveform Bars) -->
+          <div id="waveformVisualizer" class="flex items-center justify-center gap-[4px] h-8 my-2 px-2 py-1"
+            aria-label="Visualizador ecualizador de audio">
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+            <span class="waveform-bar"></span>
+          </div>
+
+          <!-- Barra de progreso y tiempos -->
+          <div class="w-full flex items-center gap-2.5 text-[10px] text-champan/80 font-sans-ui my-2 px-1">
+            <span id="musicCurrentTime" class="min-w-[28px] text-right font-medium">0:00</span>
+            <input type="range" id="musicProgressBar" min="0" max="100" value="0"
+              class="music-slider flex-1 cursor-pointer" aria-label="Control de tiempo de reproducción">
+            <span id="musicDuration" class="min-w-[28px] text-left font-medium">4:19</span>
+          </div>
+
+          <!-- Controles de reproducción con acabado metálico de gala -->
+          <div class="flex items-center justify-center gap-6 mt-3 text-champan">
+
+            <!-- Botón de Repetición -->
+            <button type="button" class="text-champan/60 hover:text-champan transition-colors p-1.5 cursor-pointer"
+              title="Repetir canción" aria-label="Repetir canción">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z" />
+              </svg>
+            </button>
+
+            <!-- Botón Anterior (Retroceder 10s) -->
+            <button id="prevTrackBtn" type="button"
+              class="text-champan hover:text-white transition-colors p-1.5 cursor-pointer"
+              title="Retroceder 10 segundos" aria-label="Retroceder canción">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+              </svg>
+            </button>
+
+            <!-- Botón Central PLAY / PAUSE con Aro Dorado -->
+            <button id="playPauseBtn" type="button"
+              class="w-14 h-14 md:w-15 md:h-15 rounded-full play-btn-halo flex items-center justify-center text-neutral-950 hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-lg"
+              title="Reproducir / Pausar" aria-label="Reproducir o pausar música">
+              <!-- Icono Play -->
+              <svg id="playIcon" class="w-7 h-7 ml-0.5 fill-current" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              <!-- Icono Pausa (oculto por defecto) -->
+              <svg id="pauseIcon" class="w-7 h-7 hidden fill-current" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+              </svg>
+            </button>
+
+            <!-- Botón Siguiente (Avanzar 10s) -->
+            <button id="nextTrackBtn" type="button"
+              class="text-champan hover:text-white transition-colors p-1.5 cursor-pointer" title="Avanzar 10 segundos"
+              aria-label="Avanzar canción">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+              </svg>
+            </button>
+
+            <!-- Botón de Favorito / Corazón -->
+            <button id="btnLikeMusic" type="button"
+              class="text-champan/60 hover:text-rose-400 transition-colors p-1.5 cursor-pointer"
+              title="Me encanta esta canción" aria-label="Me encanta">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =======================================================================
+           D. CUENTA REGRESIVA (4 Tarjetas Independientes con Profundidad)
+           ======================================================================= -->
+      <section class="py-6 px-6 text-center fade-in-section delay-200">
+
+        <!-- Separador ornamental superior -->
+        <div class="w-40 md:w-52 h-2.5 mx-auto mb-4 opacity-75">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <p class="font-script-subtitle text-3xl md:text-4xl text-foil-silver font-normal">
+          Falta poco para nuestra gran noche
+        </p>
+        <h3
+          class="font-serif-display text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-champan/90 mt-1 mb-4">
+          LA CUENTA REGRESIVA HA COMENZADO
+        </h3>
+
+        <!-- Cuadrícula de 4 Tarjetas Independientes para Días, Horas, Minutos y Segundos -->
+        <div class="grid grid-cols-4 gap-2.5 md:gap-4 max-w-xs md:max-w-sm mx-auto my-3">
+
+          <!-- Tarjeta DÍAS -->
+          <div class="countdown-box flex flex-col items-center justify-center py-3.5 px-1">
+            <span id="countDias"
+              class="font-serif-display text-3xl md:text-4xl font-bold tracking-tight text-white drop-shadow">00</span>
+            <span
+              class="font-sans-ui text-[8px] md:text-[9px] font-bold tracking-[0.22em] text-champan/80 uppercase mt-1">DÍAS</span>
+          </div>
+
+          <!-- Tarjeta HORAS -->
+          <div class="countdown-box flex flex-col items-center justify-center py-3.5 px-1">
+            <span id="countHoras"
+              class="font-serif-display text-3xl md:text-4xl font-bold tracking-tight text-white drop-shadow">00</span>
+            <span
+              class="font-sans-ui text-[8px] md:text-[9px] font-bold tracking-[0.22em] text-champan/80 uppercase mt-1">HORAS</span>
+          </div>
+
+          <!-- Tarjeta MINUTOS -->
+          <div class="countdown-box flex flex-col items-center justify-center py-3.5 px-1">
+            <span id="countMinutos"
+              class="font-serif-display text-3xl md:text-4xl font-bold tracking-tight text-white drop-shadow">00</span>
+            <span
+              class="font-sans-ui text-[8px] md:text-[9px] font-bold tracking-[0.22em] text-champan/80 uppercase mt-1">MINUTOS</span>
+          </div>
+
+          <!-- Tarjeta SEGUNDOS -->
+          <div class="countdown-box flex flex-col items-center justify-center py-3.5 px-1">
+            <span id="countSegundos"
+              class="font-serif-display text-3xl md:text-4xl font-bold tracking-tight text-foil-gold drop-shadow">00</span>
+            <span
+              class="font-sans-ui text-[8px] md:text-[9px] font-bold tracking-[0.22em] text-champan/80 uppercase mt-1">SEGUNDOS</span>
+          </div>
+
+        </div>
+
+        <!-- Frase breve de expectativa -->
+        <p class="font-serif-body italic text-xs md:text-sm text-champan/70 mt-3">
+          Cada segundo nos acerca a esta gran noche de celebración
+        </p>
+
+        <!-- Separador ornamental inferior -->
+        <div class="w-40 md:w-52 h-2.5 mx-auto mt-4 opacity-75">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+      </section>
+
+      <!-- =======================================================================
+           TARJETÓN IMPRESO DE GALA (Fecha, Hora, Ubicación y Asistencia)
+           ======================================================================= -->
+      <div
+        class="stationery-card mt-8 pt-10 pb-12 px-6 md:px-10 text-neutral-800 flex flex-col items-center text-center fade-in-section delay-300">
+
+        <!-- Marco interior dorado con esquinas ornamentales -->
+        <div class="stationery-frame-inner" aria-hidden="true"></div>
+
+        <!-- =====================================================================
+             E. FECHA DEL EVENTO
+             ===================================================================== -->
+        <section class="mb-9 flex flex-col items-center relative z-1 w-full max-w-sm">
+
+          <!-- Insignia Calendario de Gala -->
+          <div
+            class="w-16 h-16 md:w-20 md:h-20 mb-2.5 drop-shadow-xl hover:scale-105 transition-transform duration-300">
+            <img src="img/decoraciones/icono-calendario.svg" alt="Calendario" class="w-full h-full object-contain">
+          </div>
+
+          <!-- Título elegante manuscrito -->
+          <h2 class="font-script-title text-4xl md:text-5xl text-neutral-900 font-normal">
+            La Gran Noche
+          </h2>
+
+          <!-- Placa de Fecha Estilizada -->
+          <div class="stationery-badge w-full py-3.5 px-4 mt-3">
+            <p
+              class="font-serif-display text-[11px] md:text-xs font-bold tracking-[0.22em] uppercase text-amber-900/80 mb-0.5">
+              VIERNES
+            </p>
+            <p class="font-serif-display text-2xl md:text-3xl font-extrabold text-neutral-900 tracking-wider">
+              18 DE DICIEMBRE
+            </p>
+            <p
+              class="font-serif-display text-xs md:text-sm font-semibold tracking-[0.16em] uppercase text-neutral-600 mt-0.5">
+              AÑO 2026
+            </p>
+          </div>
+        </section>
+
+        <!-- Divisor fino entre secciones -->
+        <div class="w-36 md:w-48 h-2 mx-auto mb-9 opacity-65">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <!-- =====================================================================
+             HORA DEL EVENTO
+             ===================================================================== -->
+        <section class="mb-9 flex flex-col items-center relative z-1 w-full max-w-sm">
+
+          <!-- Icono de Reloj 3D -->
+          <div
+            class="w-16 h-16 md:w-20 md:h-20 mb-2.5 drop-shadow-xl hover:scale-105 transition-transform duration-300">
+            <img src="img/decoraciones/icono-reloj.svg" alt="Reloj" class="w-full h-full object-contain">
+          </div>
+
+          <!-- Título elegante manuscrito -->
+          <h2 class="font-script-title text-4xl md:text-5xl text-neutral-900 font-normal">
+            Hora de Inicio
+          </h2>
+
+          <!-- Placa de Horario Estilizada -->
+          <div class="stationery-badge w-full py-3.5 px-4 mt-3">
+            <p class="font-serif-display text-2xl md:text-3xl font-extrabold text-neutral-900 tracking-wider">
+              8:00 PM
+            </p>
+            <p class="font-serif-body italic text-xs md:text-sm text-neutral-600 mt-1">
+              Recepción e ingreso de invitados: 7:30 PM
+            </p>
+            <p class="font-sans-ui text-[10px] md:text-[11px] text-neutral-500 mt-0.5 uppercase tracking-wider">
+              Brindis y celebración: 10:00 PM
+            </p>
+          </div>
+        </section>
+
+        <!-- Divisor fino entre secciones -->
+        <div class="w-36 md:w-48 h-2 mx-auto mb-9 opacity-65">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <!-- =====================================================================
+             F. UBICACIÓN DEL EVENTO
+             ===================================================================== -->
+        <section class="mb-9 flex flex-col items-center relative z-1 w-full max-w-sm">
+
+          <!-- Icono de Mapa / Diamante 3D -->
+          <div
+            class="w-16 h-16 md:w-20 md:h-20 mb-2.5 drop-shadow-xl hover:scale-105 transition-transform duration-300">
+            <img src="img/decoraciones/icono-mapa.svg" alt="Ubicación" class="w-full h-full object-contain">
+          </div>
+
+          <!-- Título elegante manuscrito -->
+          <h2 class="font-script-title text-4xl md:text-5xl text-neutral-900 font-normal">
+            Lugar de la Fiesta
+          </h2>
+
+          <!-- Placa de Ubicación Estilizada -->
+          <div class="stationery-badge w-full py-3.5 px-4 mt-3 mb-4">
+            <p class="font-serif-display text-base md:text-lg font-bold text-neutral-900 tracking-wide">
+              Auditorio Principal de Convenciones
+            </p>
+            <p class="font-sans-ui text-xs md:text-sm font-semibold text-neutral-700 mt-1">
+              Av. Los Jazmines 187, Lima
+            </p>
+            <p class="font-serif-body italic text-[11px] md:text-xs text-neutral-500 mt-0.5">
+              Salón Gran Magnolio · Frente al Coliseo Deportivo "UBA"
+            </p>
+          </div>
+
+          <!-- Botón Google Maps de Gala con Icono y Flecha -->
+          <a href="https://maps.google.com/?q=Los+Jazmines+187+Lima" target="_blank" rel="noopener noreferrer"
+            class="btn-gold-maps" aria-label="Abrir dirección en Google Maps">
+            <svg class="w-4 h-4 text-champan" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <span>Ver ubicación en Google Maps</span>
+            <svg class="w-3.5 h-3.5 text-champan/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </section>
+
+        <!-- Divisor fino entre secciones -->
+        <div class="w-36 md:w-48 h-2 mx-auto mb-9 opacity-65">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <!-- =====================================================================
+             G. CONFIRMACIÓN DE ASISTENCIA (Botón de Gala Trigger de RSVP)
+             ===================================================================== -->
+        <section class="mb-8 flex flex-col items-center relative z-1 w-full max-w-sm">
+
+          <!-- Icono de fiesta para confirmación -->
+          <div
+            class="w-16 h-16 md:w-20 md:h-20 mb-2.5 drop-shadow-xl hover:scale-105 transition-transform duration-300">
+            <img src="img/decoraciones/icono-fiesta.svg" alt="Confirmación de Asistencia"
+              class="w-full h-full object-contain">
+          </div>
+
+          <!-- Título elegante manuscrito -->
+          <h2 class="font-script-title text-4xl md:text-5xl text-neutral-900 font-normal">
+            ¡Únete a la Fiesta!
+          </h2>
+
+          <p class="font-serif-body italic text-xs md:text-sm text-neutral-600 mt-2 mb-5 max-w-[290px] leading-relaxed">
+            Queremos celebrar esta noche contigo. Confirma tu asistencia y acompáñanos en esta gran celebración de la
+            Promoción <strong>KINTSUGI 2026</strong>.
+          </p>
+
+          <!-- Botón de Oro de Gala RSVP -->
+          <button id="btnAbrirRsvp" type="button" class="btn-gold-rsvp cursor-pointer focus:outline-none"
+            aria-label="Abrir formulario para confirmar asistencia">
+            <svg class="w-4 h-4 text-neutral-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>CONFIRMAR ASISTENCIA</span>
+          </button>
+        </section>
+
+        <!-- =====================================================================
+             H. PIE DE PÁGINA DE HONOR (Cierre de Gala)
+             ===================================================================== -->
+        <footer
+          class="mt-8 pt-8 border-t border-amber-900/20 w-full text-center relative z-1 flex flex-col items-center">
+
+          <!-- Emblema de Cierre -->
+          <div
+            class="w-14 h-14 md:w-16 md:h-16 mb-2.5 drop-shadow-md opacity-95 hover:scale-105 transition-transform duration-300">
+            <img src="img/decoraciones/icono-fiesta.svg" alt="Fiesta de Promoción" class="w-full h-full object-contain">
+          </div>
+
+          <p class="font-script-title text-3xl md:text-4xl text-neutral-900 font-normal mb-1">
+            ¡Hasta esa noche, Paloma!
+          </p>
+          <p class="font-serif-body italic text-xs md:text-sm text-neutral-600 max-w-xs leading-relaxed mb-4">
+            Gracias a nuestros padres, maestros y familiares por acompañar a <strong>Paloma Martel</strong> en cada paso de este camino. Los esperamos en nuestra gran noche de celebración.
+          </p>
+
+          <!-- Enlace Volver al inicio -->
+          <div class="my-2">
+            <a href="#inicio"
+              class="btn-volver-inicio flex items-center gap-1.5 font-bold tracking-widest uppercase text-xs">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+              </svg>
+              <span>Volver al inicio</span>
+            </a>
+          </div>
+
+          <p class="font-serif-display text-[9px] md:text-[10px] tracking-[0.2em] text-neutral-400 uppercase mt-4">
+            Paloma Martel · KINTSUGI 2026 · Una Noche Para Recordar
+          </p>
+        </footer>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- =========================================================================
+       MODAL DE FORMULARIO DE CONFIRMACIÓN (RSVP - Vista emergente elegante)
+       ========================================================================= -->
+  <div id="modalRsvp"
+    class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300"
+    role="dialog" aria-modal="true" aria-labelledby="modalRsvpTitle">
+    <div
+      class="bg-gradient-vino-principal border border-champan/30 rounded-2xl max-w-sm w-full p-6 text-slate-100 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.85)] relative overflow-hidden">
+
+      <!-- Botón de Cerrar Modal -->
+      <button id="btnCerrarRsvp" type="button"
+        class="absolute top-4 right-4 text-champan/70 hover:text-white transition-colors focus:outline-none p-1"
+        aria-label="Cerrar modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Formulario RSVP -->
+      <form id="formRsvp" class="flex flex-col gap-4 text-left">
+
+        <div class="text-center mb-1">
+          <div
+            class="w-14 h-14 md:w-16 md:h-16 mx-auto mb-2 drop-shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="img/decoraciones/icono-fiesta.svg" alt="Fiesta de Promoción KINTSUGI"
+              class="w-full h-full object-contain">
+          </div>
+          <h3 id="modalRsvpTitle" class="font-script-title text-3xl text-foil-silver font-normal">
+            ¡Únete a la celebración!
+          </h3>
+          <p class="font-sans-ui text-xs text-champan/80 mt-1 leading-relaxed">
+            Queremos celebrar esta gran noche contigo. Confirma tu asistencia a la Fiesta de Promoción de <strong>Paloma Martel</strong> · <strong>KINTSUGI 2026</strong> antes del 15 de diciembre.
+          </p>
+        </div>
+
+        <!-- Campo Nombre -->
+        <div>
+          <label for="nombreInvitado" class="block font-sans-ui text-xs font-medium text-champan/90 mb-1">
+            Nombre y Apellido *
+          </label>
+          <input type="text" id="nombreInvitado" required placeholder="Ej. Juan Pérez"
+            class="w-full px-3 py-2 bg-neutral-900/80 border border-champan/30 rounded-lg text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-champan focus:ring-1 focus:ring-champan transition-all">
+        </div>
+
+        <!-- Selección Asistencia -->
+        <fieldset>
+          <legend class="block font-sans-ui text-xs font-medium text-champan/90 mb-2">
+            ¿Asistirás a la fiesta? *
+          </legend>
+          <div class="flex gap-4">
+            <label class="flex items-center gap-2 cursor-pointer font-sans-ui text-xs text-white">
+              <input type="radio" name="asistencia" id="asistenciaSi" value="si" checked class="accent-rose-700">
+              <span>Sí, asistiré</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer font-sans-ui text-xs text-white">
+              <input type="radio" name="asistencia" id="asistenciaNo" value="no" class="accent-rose-700">
+              <span>No podré asistir</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Campo Acompañantes -->
+        <div id="campoAcompanantes">
+          <label for="numAcompanantes" class="block font-sans-ui text-xs font-medium text-champan/90 mb-1">
+            Cantidad de acompañantes
+          </label>
+          <select id="numAcompanantes"
+            class="w-full px-3 py-2 bg-neutral-900/80 border border-champan/30 rounded-lg text-sm text-white focus:outline-none focus:border-champan">
+            <option value="0">Solo yo (0 acompañantes)</option>
+            <option value="1">1 acompañante</option>
+            <option value="2">2 acompañantes</option>
+            <option value="3">3 acompañantes</option>
+          </select>
+        </div>
+
+        <!-- Dedicatoria / Mensaje -->
+        <div>
+          <label for="mensajeInvitado" class="block font-sans-ui text-xs font-medium text-champan/90 mb-1">
+            Mensaje o dedicatoria (opcional)
+          </label>
+          <textarea id="mensajeInvitado" rows="2"
+            placeholder="Escribe unas palabras o dedicatoria para la Promoción KINTSUGI..."
+            class="w-full px-3 py-2 bg-neutral-900/80 border border-champan/30 rounded-lg text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-champan"></textarea>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="flex flex-col gap-2.5 mt-3">
+          <button type="submit" class="btn-gold-rsvp w-full py-3 px-4 shadow-xl focus:outline-none cursor-pointer">
+            <svg class="w-4 h-4 text-neutral-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>ENVIAR CONFIRMACIÓN</span>
+          </button>
+
+          <button id="btnVolverAtras" type="button"
+            class="w-full py-2 text-center font-sans-ui text-xs text-champan/70 hover:text-white underline transition-colors focus:outline-none">
+            Volver atrás
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Panel de Confirmación / Éxito (Visual Feedback) -->
+      <div id="rsvpFeedback" class="hidden text-center py-4">
+        <div
+          class="w-14 h-14 mx-auto mb-3 text-champan flex items-center justify-center rounded-full bg-rose-950/70 border border-champan/40">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <h4 class="font-script-title text-3xl text-foil-silver mb-2">¡Nos vemos en la fiesta!</h4>
+        <p id="feedbackMsg" class="font-sans-ui text-xs text-champan/90 mb-5 leading-relaxed">
+          Tu respuesta ha sido registrada exitosamente.
+        </p>
+
+        <div class="flex flex-col gap-2">
+          <a id="btnEnviarWhatsApp" href="#" target="_blank" rel="noopener noreferrer"
+            class="hidden w-full py-2.5 px-4 bg-emerald-800 hover:bg-emerald-700 text-white font-sans-ui text-xs font-semibold rounded-lg shadow-md transition-colors flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.062-2.115-.533-1.815-.762-2.986-2.61-3.076-2.731-.09-.12-1.258-1.674-1.258-3.193 0-1.519.795-2.268 1.077-2.578.282-.31.615-.386.82-.386.205 0 .41.002.59.011.19.01.442-.072.69.525.257.618.877 2.143.953 2.3.076.157.127.341.026.544-.101.203-.153.33-.306.508-.153.178-.323.397-.461.533-.153.151-.313.315-.134.622.179.308.796 1.314 1.708 2.126 1.173 1.045 2.161 1.369 2.468 1.523.308.153.487.128.666-.077.18-.205.769-.897.974-1.205.205-.308.41-.257.691-.153.282.103 1.794.846 2.101.999.308.153.513.231.59.359.077.128.077.744-.067 1.149z" />
+            </svg>
+            Enviar por WhatsApp
+          </a>
+
+          <button onclick="document.getElementById('modalRsvp').classList.add('hidden')" type="button"
+            class="w-full py-2 text-center font-sans-ui text-xs text-champan/70 hover:text-white underline transition-colors">
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts JavaScript del Proyecto -->
+  <script src="js/contador.js"></script>
+  <script src="js/reproductor.js"></script>
+  <script src="js/confirmacion.js"></script>
+  <script src="js/principal.js"></script>
+
+</body>
+
+</html>

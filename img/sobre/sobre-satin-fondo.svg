@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <!-- Forro interior de seda profunda color vino tinto / borgoña de gala -->
+    <linearGradient id="innerLiningWine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180208"/>
+      <stop offset="35%" stop-color="#2e0612"/>
+      <stop offset="65%" stop-color="#420b1b"/>
+      <stop offset="100%" stop-color="#150106"/>
+    </linearGradient>
+
+    <!-- Textura de seda interior brillante -->
+    <radialGradient id="innerSatinSheen" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#5a1025" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#2e0612" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#120106" stop-opacity="0.9"/>
+    </radialGradient>
+
+    <!-- Borde exterior cromado del sobre -->
+    <linearGradient id="chromeLiningBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#cbd5e1"/>
+      <stop offset="50%" stop-color="#64748b"/>
+      <stop offset="75%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rectángulo base del fondo interior del sobre -->
+  <rect x="2" y="2" width="396" height="246" rx="6" ry="6" fill="url(#innerLiningWine)" stroke="url(#chromeLiningBorder)" stroke-width="2.5"/>
+
+  <!-- Brillo de seda interior -->
+  <rect x="5" y="5" width="390" height="240" rx="4" ry="4" fill="url(#innerSatinSheen)"/>
+
+  <!-- Filete fino interior plateado que demarca el forro de lujo -->
+  <rect x="7" y="7" width="386" height="236" rx="3" ry="3" fill="none" stroke="#e2e8f0" stroke-width="0.8" opacity="0.35"/>
+</svg>

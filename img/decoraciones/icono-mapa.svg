@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 10 92 108" width="100%" height="100%">
+  <defs>
+    <!-- Oro Pulido Imperial -->
+    <linearGradient id="pinGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8dc"/>
+      <stop offset="25%" stop-color="#f5e1a4"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="75%" stop-color="#99731d"/>
+      <stop offset="100%" stop-color="#523c08"/>
+    </linearGradient>
+
+    <!-- Bisel Dorado Brillante -->
+    <linearGradient id="pinGoldHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffd700" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#b8860b" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Joya Central Rubí / Borgoña Real Facetada -->
+    <radialGradient id="pinJewel" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff7b99"/>
+      <stop offset="40%" stop-color="#c5163f"/>
+      <stop offset="75%" stop-color="#70061f"/>
+      <stop offset="100%" stop-color="#2c000a"/>
+    </radialGradient>
+
+    <!-- Sombra Profunda de Gala -->
+    <filter id="pinShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#1a0005" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#pinShadow)">
+    <!-- Corona de Laureles Dorados que Enmarca el Pin -->
+    <g fill="url(#pinGold)" opacity="0.85">
+      <!-- Laurel Izquierdo -->
+      <path d="M 36 94 C 28 89 22 80 19 69 C 23 72 28 74 33 74 C 27 66 24 57 25 46 C 28 51 32 55 37 57 C 32 49 33 39 37 31 C 40 37 43 41 46 44"/>
+      <!-- Laurel Derecho -->
+      <path d="M 84 94 C 92 89 98 80 101 69 C 97 72 92 74 87 74 C 93 66 96 57 95 46 C 92 51 88 55 83 57 C 88 49 87 39 83 31 C 80 37 77 41 74 44"/>
+      <!-- Lazo / Moño de Oro en la Base -->
+      <circle cx="60" cy="103" r="3.5" fill="url(#pinGold)"/>
+      <path d="M 57 104 Q 46 111 41 117 Q 49 113 58 106 Z" fill="url(#pinGold)"/>
+      <path d="M 63 104 Q 74 111 79 117 Q 71 113 62 106 Z" fill="url(#pinGold)"/>
+    </g>
+
+    <!-- Ondas concéntricas de pulso / brillo en la punta del suelo -->
+    <ellipse cx="60" cy="99" rx="14" ry="4" fill="none" stroke="url(#pinGold)" stroke-width="1.2" opacity="0.6"/>
+    <ellipse cx="60" cy="99" rx="8" ry="2.2" fill="none" stroke="#fff8dc" stroke-width="0.8" opacity="0.8"/>
+
+    <!-- Cuerpo Esculpido del Pin Imperial de Navegación -->
+    <!-- Contorno Base de Oro con Sombra 3D -->
+    <path d="M 60 16 C 41.5 16 26.5 31 26.5 49.5 C 26.5 70 54 94 58.5 98 C 59.4 98.8 60.6 98.8 61.5 98 C 66 94 93.5 70 93.5 49.5 C 93.5 31 78.5 16 60 16 Z" 
+          fill="url(#pinGold)" stroke="#3a2503" stroke-width="0.8"/>
+
+    <!-- Resalte de Bisel Superior -->
+    <path d="M 60 18.5 C 43 18.5 29 32.5 29 49.5 C 29 67 52 89 59.5 95.5 C 60 95 60.5 94.5 61 94 C 54 86 32 64 32 49.5 C 32 34 44.5 21.5 60 21.5 C 75.5 21.5 88 34 88 49.5 C 88 64 66 86 59 94 C 67.5 87 91 67 91 49.5 C 91 32.5 77 18.5 60 18.5 Z"
+          fill="url(#pinGoldHighlight)"/>
+
+    <!-- Anillo Interior con Punteado de Alta Relojería -->
+    <circle cx="60" cy="49" r="23" fill="#2c000a" stroke="url(#pinGold)" stroke-width="2"/>
+    <circle cx="60" cy="49" r="21" fill="none" stroke="#fff8dc" stroke-width="0.7" stroke-dasharray="1.2, 2.4" opacity="0.9"/>
+
+    <!-- Cabujón / Joya Central Rubí Facetada -->
+    <circle cx="60" cy="49" r="18" fill="url(#pinJewel)"/>
+
+    <!-- Estrella Rosa de los Vientos / Brújula de Gala en Oro Centrada -->
+    <g fill="url(#pinGold)">
+      <!-- Punta Norte -->
+      <polygon points="60,33 62.5,46 60,49 57.5,46" fill="#fff8dc"/>
+      <polygon points="60,33 60,49 57.5,46" fill="#aa8222"/>
+      <!-- Punta Sur -->
+      <polygon points="60,65 62.5,52 60,49 57.5,52" fill="#d4af37"/>
+      <polygon points="60,65 60,49 57.5,52" fill="#523c08"/>
+      <!-- Punta Este -->
+      <polygon points="76,49 63,51.5 60,49 63,46.5" fill="#f5e1a4"/>
+      <polygon points="76,49 60,49 63,51.5" fill="#99731d"/>
+      <!-- Punta Oeste -->
+      <polygon points="44,49 57,51.5 60,49 57,46.5" fill="#fff8dc"/>
+      <polygon points="44,49 60,49 57,46.5" fill="#aa8222"/>
+    </g>
+
+    <!-- Destello Central / Diamante en el Centro del Pin -->
+    <circle cx="60" cy="49" r="2.8" fill="#ffffff" stroke="#d4af37" stroke-width="0.8"/>
+    <circle cx="58.8" cy="48" r="0.8" fill="#ffffff"/>
+
+    <!-- Destellos de Luz en el Borde Superior -->
+    <circle cx="43" cy="27" r="2.2" fill="#ffffff" opacity="0.85"/>
+    <polygon points="73,29 74.5,32 77.5,33.5 74.5,35 73,38 71.5,35 68.5,33.5 71.5,32" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <!-- Filtros de desenfoque gaussianos para sombras y luces de tejido de seda -->
+    <filter id="foldShadowBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="foldHighlightBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="deepCreaseBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+
+    <!-- Gradiente de seda satinada blanca/perla con brillo de seda auténtico -->
+    <linearGradient id="silkSatinPocket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#f8fafc"/>
+      <stop offset="55%" stop-color="#e9eff6"/>
+      <stop offset="80%" stop-color="#d4dfea"/>
+      <stop offset="100%" stop-color="#cad5e2"/>
+    </linearGradient>
+
+    <!-- Almohadillado volumétrico del bolsillo inferior -->
+    <radialGradient id="pocketCushion" cx="50%" cy="65%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#f1f5f9" stop-opacity="0.75"/>
+      <stop offset="80%" stop-color="#dbe4ee" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.6"/>
+    </radialGradient>
+
+    <!-- Borde exterior de plata cromada pulida -->
+    <linearGradient id="chromePocketBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="15%" stop-color="#e2e8f0"/>
+      <stop offset="40%" stop-color="#94a3b8"/>
+      <stop offset="65%" stop-color="#ffffff"/>
+      <stop offset="85%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+  </defs>
+
+  <!-- =========================================================================
+       CUERPO DEL BOLSILLO SATINADO FRONTAL (VA DESDE LAS ESQUINAS SUPERIORES 
+       2,2 Y 398,2 CUBRIENDO COMPLETAMENTE LOS LATERALES Y LA BASE)
+       ========================================================================= -->
+
+  <!-- 1. BASE DEL BOLSILLO FRONTAL SATINADO -->
+  <!-- Comienza en la esquina superior izquierda (2,2), desciende en curva suave al centro (200,138), sube a la esquina superior derecha (398,2) y rodea los laterales e inferior -->
+  <path d="M 2,2 
+           C 60,34 130,95 200,138 
+           C 270,95 340,34 398,2 
+           L 398,244 
+           C 398,247 395,249 392,249 
+           L 8,249 
+           C 5,249 2,247 2,244 Z" 
+        fill="url(#silkSatinPocket)" 
+        stroke="url(#chromePocketBorder)" 
+        stroke-width="2.5"/>
+
+  <!-- Almohadillado y volumen acolchado del bolsillo -->
+  <path d="M 4,4 
+           C 62,36 130,96 200,138 
+           C 270,96 338,36 396,4 
+           L 396,243 
+           L 4,243 Z" 
+        fill="url(#pocketCushion)" 
+        opacity="0.85"/>
+
+  <!-- Ribete cromado del cuello/boca del sobre -->
+  <path d="M 2,2 C 60,34 130,95 200,138 C 270,95 340,34 398,2" 
+        stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M 3,4 C 61,36 130,97 200,140 C 270,97 339,36 397,4" 
+        stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Costuras diagonales laterales (triángulos laterales del sobre) -->
+  <path d="M 4,4 L 200,138" stroke="#475569" stroke-width="2" opacity="0.35" filter="url(#foldHighlightBlur)"/>
+  <path d="M 5,5 L 199,137" stroke="#ffffff" stroke-width="2.2" opacity="0.8" filter="url(#foldHighlightBlur)"/>
+
+  <path d="M 396,4 L 200,138" stroke="#475569" stroke-width="2" opacity="0.35" filter="url(#foldHighlightBlur)"/>
+  <path d="M 395,5 L 201,137" stroke="#ffffff" stroke-width="2.2" opacity="0.8" filter="url(#foldHighlightBlur)"/>
+
+  <!-- Costuras diagonales inferiores -->
+  <path d="M 4,244 L 200,138" stroke="#475569" stroke-width="2.5" opacity="0.45" filter="url(#foldHighlightBlur)"/>
+  <path d="M 6,242 L 199,137" stroke="#ffffff" stroke-width="3" opacity="0.9" filter="url(#foldHighlightBlur)"/>
+
+  <path d="M 396,244 L 200,138" stroke="#475569" stroke-width="2.5" opacity="0.45" filter="url(#foldHighlightBlur)"/>
+  <path d="M 394,242 L 201,137" stroke="#ffffff" stroke-width="3" opacity="0.9" filter="url(#foldHighlightBlur)"/>
+
+  <!-- =========================================================================
+       PLIEGUES ORGÁNICOS DE SEDA (IDÉNTICOS A LA IMAGEN DE REFERENCIA)
+       ========================================================================= -->
+
+  <!-- Pliegue horizontal base inferior -->
+  <g>
+    <path d="M 6,226 Q 200,233 394,226" stroke="#475569" stroke-width="3" fill="none" opacity="0.5" filter="url(#foldShadowBlur)"/>
+    <path d="M 6,224 Q 200,231 394,224" stroke="#ffffff" stroke-width="3.5" fill="none" opacity="0.9" filter="url(#foldHighlightBlur)"/>
+  </g>
+
+  <!-- FRUNCES ESQUINA INFERIOR IZQUIERDA -->
+  <g>
+    <path d="M 4,244 C 40,212 90,195 160,190" stroke="#334155" stroke-width="4.5" fill="none" opacity="0.55" filter="url(#deepCreaseBlur)"/>
+    <path d="M 5,243 C 40,211 90,194 160,189" stroke="#64748b" stroke-width="2.8" fill="none" opacity="0.6" filter="url(#foldHighlightBlur)"/>
+    <path d="M 7,241 C 42,209 92,192 162,187" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.95" filter="url(#foldHighlightBlur)"/>
+
+    <path d="M 4,228 C 32,206 70,200 120,208" stroke="#475569" stroke-width="3.5" fill="none" opacity="0.5" filter="url(#foldShadowBlur)"/>
+    <path d="M 6,226 C 34,204 72,198 122,206" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9" filter="url(#foldHighlightBlur)"/>
+
+    <path d="M 35,244 C 70,234 125,228 180,232" stroke="#475569" stroke-width="3" fill="none" opacity="0.45" filter="url(#foldShadowBlur)"/>
+    <path d="M 35,242 C 70,232 125,226 180,230" stroke="#ffffff" stroke-width="3.5" fill="none" opacity="0.85" filter="url(#foldHighlightBlur)"/>
+  </g>
+
+  <!-- FRUNCES ESQUINA INFERIOR DERECHA -->
+  <g>
+    <path d="M 396,244 C 360,212 310,195 240,190" stroke="#334155" stroke-width="4.5" fill="none" opacity="0.55" filter="url(#deepCreaseBlur)"/>
+    <path d="M 395,243 C 360,211 310,194 240,189" stroke="#64748b" stroke-width="2.8" fill="none" opacity="0.6" filter="url(#foldHighlightBlur)"/>
+    <path d="M 393,241 C 358,209 308,192 238,187" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.95" filter="url(#foldHighlightBlur)"/>
+
+    <path d="M 396,228 C 368,206 330,200 280,208" stroke="#475569" stroke-width="3.5" fill="none" opacity="0.5" filter="url(#foldShadowBlur)"/>
+    <path d="M 394,226 C 366,204 328,198 278,206" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9" filter="url(#foldHighlightBlur)"/>
+
+    <path d="M 365,244 C 330,234 275,228 220,232" stroke="#475569" stroke-width="3" fill="none" opacity="0.45" filter="url(#foldShadowBlur)"/>
+    <path d="M 365,242 C 330,232 275,226 220,230" stroke="#ffffff" stroke-width="3.5" fill="none" opacity="0.85" filter="url(#foldHighlightBlur)"/>
+  </g>
+
+  <!-- Borde interior fino de brillo en los lados y base -->
+  <path d="M 4,4 L 4,242 L 396,242 L 396,4" stroke="#ffffff" stroke-width="1.2" fill="none" opacity="0.75"/>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7B1E3A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E6B2"/>
+      <stop offset="30%" stop-color="#C9A84C"/>
+      <stop offset="65%" stop-color="#A07828"/>
+      <stop offset="100%" stop-color="#DFC8A0"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D6"/>
+      <stop offset="50%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8B5E1A"/>
+    </linearGradient>
+    <linearGradient id="wineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B1A36"/>
+      <stop offset="100%" stop-color="#4A0D1F"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fondo circular sutil -->
+  <circle cx="60" cy="60" r="54" fill="url(#bgGlow)"/>
+
+  <!-- Estrella de 8 puntas central (champan/dorada) -->
+  <g filter="url(#glow)" transform="translate(60,60)">
+    <polygon points="0,-28 5,-9 20,-20 9,-5 28,0 9,5 20,20 5,9 0,28 -5,9 -20,20 -9,5 -28,0 -9,-5 -20,-20 -5,-9"
+      fill="url(#goldMain)" opacity="0.95"/>
+    <!-- Estrella interior pequeña -->
+    <polygon points="0,-14 2.5,-4.5 10,-10 4.5,-2.5 14,0 4.5,2.5 10,10 2.5,4.5 0,14 -2.5,4.5 -10,10 -4.5,2.5 -14,0 -4.5,-2.5 -10,-10 -2.5,-4.5"
+      fill="#F5E6B2" opacity="0.6"/>
+  </g>
+
+  <!-- Copa de champán izquierda -->
+  <g transform="translate(22, 42)">
+    <path d="M12 0 C8 8, 4 16, 6 22 L18 22 C20 16, 16 8, 12 0Z" fill="url(#goldAccent)" opacity="0.85"/>
+    <line x1="12" y1="22" x2="12" y2="34" stroke="url(#goldMain)" stroke-width="2.5"/>
+    <ellipse cx="12" cy="34" rx="8" ry="2.5" fill="none" stroke="url(#goldMain)" stroke-width="2"/>
+    <!-- Burbuja -->
+    <circle cx="10" cy="12" r="1.5" fill="#FFF5D6" opacity="0.7"/>
+    <circle cx="14" cy="8" r="1" fill="#FFF5D6" opacity="0.6"/>
+  </g>
+
+  <!-- Copa de champán derecha -->
+  <g transform="translate(80, 42)">
+    <path d="M8 0 C4 8, 0 16, 2 22 L14 22 C16 16, 12 8, 8 0Z" fill="url(#goldAccent)" opacity="0.85"/>
+    <line x1="8" y1="22" x2="8" y2="34" stroke="url(#goldMain)" stroke-width="2.5"/>
+    <ellipse cx="8" cy="34" rx="8" ry="2.5" fill="none" stroke="url(#goldMain)" stroke-width="2"/>
+    <!-- Burbuja -->
+    <circle cx="6" cy="10" r="1.5" fill="#FFF5D6" opacity="0.7"/>
+    <circle cx="10" cy="6" r="1" fill="#FFF5D6" opacity="0.6"/>
+  </g>
+
+  <!-- Destellos/confeti dispersos -->
+  <!-- Destello superior izquierdo -->
+  <g transform="translate(28, 20)" filter="url(#glow)">
+    <line x1="0" y1="-7" x2="0" y2="7" stroke="#F5E6B2" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="-7" y1="0" x2="7" y2="0" stroke="#F5E6B2" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="5" y1="-5" x2="-5" y2="5" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+  <!-- Destello superior derecho -->
+  <g transform="translate(92, 18)" filter="url(#glow)">
+    <line x1="0" y1="-6" x2="0" y2="6" stroke="#F5E6B2" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-6" y1="0" x2="6" y2="0" stroke="#F5E6B2" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-4" y1="-4" x2="4" y2="4" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
+    <line x1="4" y1="-4" x2="-4" y2="4" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
+  </g>
+  <!-- Destello inferior -->
+  <g transform="translate(60, 100)" filter="url(#glow)">
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#DFC8A0" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#DFC8A0" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+  <!-- Pequeños rombos decorativos (confeti) -->
+  <rect x="38" y="14" width="5" height="5" rx="1" fill="#C9A84C" opacity="0.7" transform="rotate(45 40.5 16.5)"/>
+  <rect x="75" y="30" width="4" height="4" rx="1" fill="#8B1A36" opacity="0.6" transform="rotate(30 77 32)"/>
+  <rect x="18" y="65" width="4" height="4" rx="1" fill="#C9A84C" opacity="0.5" transform="rotate(15 20 67)"/>
+  <rect x="95" y="68" width="4" height="4" rx="1" fill="#A07828" opacity="0.6" transform="rotate(60 97 70)"/>
+
+  <!-- Nota musical pequeña -->
+  <g transform="translate(52, 78)" fill="url(#goldAccent)" opacity="0.8">
+    <ellipse cx="6" cy="12" rx="6" ry="4" transform="rotate(-20 6 12)"/>
+    <rect x="11.5" y="0" width="2" height="12" rx="1"/>
+    <rect x="11.5" y="0" width="8" height="2" rx="1"/>
+  </g>
+</svg>

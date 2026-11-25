@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldFiligree" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8db"/>
+      <stop offset="30%" stop-color="#e9d39c"/>
+      <stop offset="65%" stop-color="#c59b4c"/>
+      <stop offset="100%" stop-color="#8b6521"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <g filter="url(#goldGlow)" fill="none" stroke="url(#goldFiligree)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Corner right-angle structural lines -->
+    <path d="M6,6 L75,6" stroke-width="1.8"/>
+    <path d="M6,6 L6,75" stroke-width="1.8"/>
+    <!-- Secondary parallel fine line -->
+    <path d="M12,12 L55,12" stroke-width="0.9" opacity="0.8"/>
+    <path d="M12,12 L12,55" stroke-width="0.9" opacity="0.8"/>
+    <!-- Corner flourish curls -->
+    <path d="M6,6 C20,18 24,35 18,48 C14,57 6,55 8,46 C10,38 22,34 35,35 C48,36 57,44 55,54 C53,62 44,64 38,58 C32,52 38,42 46,42" stroke-width="1.2"/>
+    <path d="M6,6 C18,20 35,24 48,18 C57,14 55,6 46,8 C38,10 34,22 35,35 C36,48 44,57 54,55 C62,53 64,44 58,38 C52,32 42,38 42,46" stroke-width="1.2"/>
+    <!-- Central diamond star at corner intersection -->
+    <polygon points="12,6 15,12 21,12 16,16 18,22 12,18 6,22 8,16 3,12 9,12" fill="url(#goldFiligree)" stroke="none"/>
+    <circle cx="28" cy="28" r="2.5" fill="url(#goldFiligree)" stroke="none"/>
+    <circle cx="48" cy="12" r="1.5" fill="url(#goldFiligree)" stroke="none"/>
+    <circle cx="12" cy="48" r="1.5" fill="url(#goldFiligree)" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 8 92 106" width="100%" height="100%">
+  <defs>
+    <!-- Oro Pulido Multinivel -->
+    <linearGradient id="clockGoldCase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff9e6"/>
+      <stop offset="20%" stop-color="#f5df97"/>
+      <stop offset="45%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#aa8222"/>
+      <stop offset="100%" stop-color="#543c06"/>
+    </linearGradient>
+
+    <!-- Dial de Porcelana / Vino Tinto Real -->
+    <radialGradient id="clockDialWine" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#5a0518"/>
+      <stop offset="60%" stop-color="#36010d"/>
+      <stop offset="100%" stop-color="#190005"/>
+    </radialGradient>
+
+    <linearGradient id="goldBezelRing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9a741e"/>
+      <stop offset="35%" stop-color="#ffd700"/>
+      <stop offset="50%" stop-color="#fff8db"/>
+      <stop offset="75%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#5a4208"/>
+    </linearGradient>
+
+    <radialGradient id="centerRuby" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff6b8b"/>
+      <stop offset="45%" stop-color="#be123c"/>
+      <stop offset="90%" stop-color="#4c0519"/>
+    </radialGradient>
+
+    <filter id="clockShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#1a0005" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#clockShadow)">
+    <!-- Corona y Aro Superior de Reloj de Bolsillo Imperial -->
+    <g>
+      <!-- Aro Superior para Cadena de Oro -->
+      <path d="M 50 18 C 50 11 70 11 70 18 C 70 23 50 23 50 18 Z" fill="none" stroke="url(#clockGoldCase)" stroke-width="3.5"/>
+      <ellipse cx="60" cy="18" rx="8" ry="6" fill="none" stroke="#fff8db" stroke-width="0.8" opacity="0.7"/>
+      
+      <!-- Corona Acanalada de Cuerda -->
+      <rect x="55" y="21" width="10" height="7" rx="2" fill="url(#clockGoldCase)" stroke="#3a2503" stroke-width="0.5"/>
+      <line x1="57" y1="21" x2="57" y2="28" stroke="#543c06" stroke-width="0.7"/>
+      <line x1="60" y1="21" x2="60" y2="28" stroke="#fff8db" stroke-width="0.7"/>
+      <line x1="63" y1="21" x2="63" y2="28" stroke="#543c06" stroke-width="0.7"/>
+      <path d="M 52 27 L 68 27 L 65 31 L 55 31 Z" fill="url(#clockGoldCase)"/>
+    </g>
+
+    <!-- Caja Principal de Oro Labrado Exterior -->
+    <circle cx="60" cy="69" r="41" fill="url(#clockGoldCase)"/>
+    <!-- Borde con Punteado Acanalado Perimetral (Coin Edge) -->
+    <circle cx="60" cy="69" r="39.5" fill="none" stroke="#362204" stroke-width="0.6"/>
+    <circle cx="60" cy="69" r="38" fill="none" stroke="#fff8db" stroke-width="1.2" stroke-dasharray="1.5, 2.5"/>
+
+    <!-- Bisel de Oro Pulido Interior -->
+    <circle cx="60" cy="69" r="35.5" fill="url(#goldBezelRing)"/>
+    <circle cx="60" cy="69" r="33.5" fill="none" stroke="#fff8db" stroke-width="0.8"/>
+
+    <!-- Esfera / Dial de Gala en Vino Tinto y Oro -->
+    <circle cx="60" cy="69" r="32" fill="url(#clockDialWine)"/>
+
+    <!-- Anillo Perimetral de Minutos / Riel de Ferrocarril Clásico -->
+    <circle cx="60" cy="69" r="28" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.6"/>
+    <circle cx="60" cy="69" r="29.5" fill="none" stroke="#d4af37" stroke-width="0.5" stroke-dasharray="0.8, 2.4" opacity="0.8"/>
+
+    <!-- Números Romanos de Gala en Oro -->
+    <!-- XII (12) -->
+    <text x="60" y="48.5" font-family="'Cinzel', 'Times New Roman', serif" font-size="7" font-weight="bold" fill="url(#clockGoldCase)" text-anchor="middle">XII</text>
+    <!-- III (3) -->
+    <text x="83" y="71.5" font-family="'Cinzel', 'Times New Roman', serif" font-size="7" font-weight="bold" fill="url(#clockGoldCase)" text-anchor="middle">III</text>
+    <!-- VI (6) -->
+    <text x="60" y="93.5" font-family="'Cinzel', 'Times New Roman', serif" font-size="7" font-weight="bold" fill="url(#clockGoldCase)" text-anchor="middle">VI</text>
+    <!-- IX (9) -->
+    <text x="37" y="71.5" font-family="'Cinzel', 'Times New Roman', serif" font-size="7" font-weight="bold" fill="url(#clockGoldCase)" text-anchor="middle">IX</text>
+
+    <!-- Marcadores de Hora Intermedios (Puntos de Oro) -->
+    <circle cx="73" cy="53" r="1.2" fill="#ffd700"/>
+    <circle cx="81.5" cy="60" r="1.2" fill="#ffd700"/>
+    <circle cx="81.5" cy="78" r="1.2" fill="#ffd700"/>
+    <circle cx="73" cy="86" r="1.2" fill="#ffd700"/>
+    <circle cx="47" cy="86" r="1.2" fill="#ffd700"/>
+    <circle cx="38.5" cy="78" r="1.2" fill="#ffd700"/>
+    <circle cx="38.5" cy="60" r="1.2" fill="#ffd700"/>
+    <circle cx="47" cy="53" r="1.2" fill="#ffd700"/>
+
+    <!-- Manecillas Barrocas de Gala Apuntando Exactamente a las 8:00 PM (Horario del Evento) -->
+    <!-- Manecilla de Minutos (hacia las 12 / arriba) -->
+    <g>
+      <path d="M 59 69 L 59 47 Q 56 45 59 41 L 60 36 L 61 41 Q 64 45 61 47 L 61 69 Z" fill="url(#clockGoldCase)" stroke="#fff8db" stroke-width="0.3"/>
+      <circle cx="60" cy="44" r="1.5" fill="#190005"/>
+    </g>
+
+    <!-- Manecilla de Horas (hacia las 8 en punto / abajo a la izquierda) -->
+    <g transform="rotate(240 60 69)">
+      <path d="M 58.5 69 L 58.5 53 Q 55 51 58.5 48 L 60 44 L 61.5 48 Q 65 51 61.5 53 L 61.5 69 Z" fill="url(#clockGoldCase)" stroke="#fff8db" stroke-width="0.3"/>
+      <circle cx="60" cy="50" r="1.4" fill="#190005"/>
+    </g>
+
+    <!-- Segundero Fino de Oro con Contrapeso -->
+    <g>
+      <line x1="60" y1="76" x2="60" y2="43" stroke="#fff8db" stroke-width="0.8"/>
+      <circle cx="60" cy="74" r="1.8" fill="url(#clockGoldCase)"/>
+    </g>
+
+    <!-- Pivote Central con Joya Rubí Facetada -->
+    <circle cx="60" cy="69" r="4.2" fill="url(#clockGoldCase)" stroke="#3a2503" stroke-width="0.5"/>
+    <circle cx="60" cy="69" r="2.8" fill="url(#centerRuby)"/>
+    <circle cx="59.2" cy="68" r="0.8" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <!-- Silver Metal Gradient for Bezel and Ribbon Borders -->
+    <linearGradient id="silverChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="75%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Deep Satin Ribbon Gradient -->
+    <linearGradient id="ribbonTailDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a1220"/>
+      <stop offset="25%" stop-color="#182334"/>
+      <stop offset="50%" stop-color="#2a384d"/>
+      <stop offset="75%" stop-color="#182334"/>
+      <stop offset="100%" stop-color="#0a1220"/>
+    </linearGradient>
+
+    <!-- Deep Sapphire Gem Crystal Gradient -->
+    <radialGradient id="gemCrystal" cx="38%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="25%" stop-color="#2563eb"/>
+      <stop offset="55%" stop-color="#1d4ed8"/>
+      <stop offset="85%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+
+    <!-- Specular Highlight for Gem -->
+    <linearGradient id="gemGlint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="broochShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#broochShadow)">
+    <!-- Left Ribbon Tail with Swallowtail (V-cut) -->
+    <g>
+      <!-- Silver outline / base for left tail -->
+      <polygon points="68,68 38,122 56,112 70,122 78,68" fill="url(#silverChrome)" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.5))"/>
+      <!-- Dark core for left tail -->
+      <polygon points="69,70 42,118 56,110 66,118 77,70" fill="url(#ribbonTailDark)"/>
+      <!-- Inner silver highlight -->
+      <line x1="72" y1="70" x2="56" y2="110" stroke="#cbd5e1" stroke-width="1" opacity="0.65"/>
+    </g>
+
+    <!-- Right Ribbon Tail with Swallowtail (V-cut) -->
+    <g>
+      <!-- Silver outline / base for right tail -->
+      <polygon points="92,68 82,122 96,112 114,122 84,68" fill="url(#silverChrome)" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.5))"/>
+      <!-- Dark core for right tail -->
+      <polygon points="91,70 86,118 96,110 110,118 83,70" fill="url(#ribbonTailDark)"/>
+      <!-- Inner silver highlight -->
+      <line x1="88" y1="70" x2="96" y2="110" stroke="#cbd5e1" stroke-width="1" opacity="0.65"/>
+    </g>
+
+    <!-- Central Round Jewel Brooch -->
+    <!-- Outer Silver Bezel Ring with metallic 3D rim -->
+    <circle cx="80" cy="62" r="24" fill="url(#silverChrome)" stroke="#ffffff" stroke-width="1.4"/>
+    <circle cx="80" cy="62" r="21" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <circle cx="80" cy="62" r="19" fill="none" stroke="url(#silverChrome)" stroke-width="1.8"/>
+
+    <!-- Inner Faceted Deep Crystal Gem -->
+    <circle cx="80" cy="62" r="17" fill="url(#gemCrystal)"/>
+
+    <!-- Facet Structure on the Crystal -->
+    <polygon points="80,48 89,54 93,62 89,70 80,76 71,70 67,62 71,54" fill="none" stroke="#93c5fd" stroke-width="0.8" opacity="0.75"/>
+    <polygon points="80,52 86,56 89,62 86,68 80,72 74,68 71,62 74,56" fill="#3b82f6" fill-opacity="0.3" stroke="#ffffff" stroke-width="0.6" opacity="0.85"/>
+
+    <!-- Specular Crescent Glint Top-Left -->
+    <ellipse cx="73" cy="55" rx="6" ry="3.5" transform="rotate(-35 73 55)" fill="url(#gemGlint)"/>
+    <circle cx="71" cy="53" r="1.8" fill="#ffffff"/>
+
+    <!-- Brilliant 4-Point Specular Star Glint on Bezel Rim -->
+    <g transform="translate(94, 48) scale(0.75)">
+      <polygon points="0,-14 3,-3 14,0 3,3 0,14 -3,3 -14,0 -3,-3" fill="#ffffff"/>
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" filter="drop-shadow(0 0 4px #ffffff)"/>
+    </g>
+  </g>
+</svg>

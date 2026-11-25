@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sealSilver" cx="38%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#f1f5f9"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </radialGradient>
+    <radialGradient id="jewelCenter" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#93c5fd"/>
+      <stop offset="70%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+    <filter id="sealShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Ribbons Dropping Downwards from Seal (like in the video) -->
+  <g filter="url(#sealShadow)">
+    <path d="M52,70 L40,110 L52,102 L60,110 L56,70 Z" fill="url(#sealSilver)" stroke="#e2e8f0" stroke-width="0.5"/>
+    <path d="M68,70 L80,110 L68,102 L60,110 L64,70 Z" fill="url(#sealSilver)" stroke="#e2e8f0" stroke-width="0.5"/>
+  </g>
+
+  <!-- Outer Fluted Medallion Ring -->
+  <circle cx="60" cy="60" r="46" fill="url(#sealSilver)" filter="url(#sealShadow)" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="60" cy="60" r="40" fill="none" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <circle cx="60" cy="60" r="36" fill="url(#sealSilver)" stroke="#ffffff" stroke-width="0.8"/>
+
+  <!-- Graduation Cap Silhouette Inside Seal -->
+  <polygon points="60,35 84,47 60,58 36,47" fill="#1e293b" stroke="#ffffff" stroke-width="0.8"/>
+  <path d="M46,51 L46,62 C46,69 74,69 74,62 L74,51 C70,55 65,57 60,57 C55,57 50,55 46,51 Z" fill="#0f172a"/>
+  
+  <!-- Central Crystal / Diamond Jewel Button -->
+  <circle cx="60" cy="46" r="6" fill="url(#jewelCenter)" stroke="#ffffff" stroke-width="1.2"/>
+  <!-- Tassel -->
+  <path d="M60,46 Q72,46 76,57 L78,72" fill="none" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

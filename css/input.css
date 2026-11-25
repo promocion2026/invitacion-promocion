@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vino-950: #140207;
+  --color-vino-900: #23040c;
+  --color-vino-850: #300612;
+  --color-vino-800: #420a1b;
+  --color-vino-700: #5c0f27;
+  --color-vino-600: #7b1635;
+  --color-vino-500: #9c2045;
+  --color-vino-400: #be335a;
+  
+  --color-granate: #520b1e;
+  --color-borgona: #380714;
+  --color-borgona-dark: #1f040b;
+  
+  --color-marfil: #faf7f2;
+  --color-marfil-suave: #f4eee2;
+  --color-marfil-crema: #eae0d0;
+  
+  --color-champan: #e8d8be;
+  --color-champan-dorado: #dfc299;
+  --color-dorado-brillo: #f5e4bc;
+  --color-dorado-acento: #c89e58;
+  --color-plateado: #e2e8f0;
+  --color-plateado-brillo: #f8fafc;
+  
+  --font-serif-cinzel: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-serif-cormorant: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-script-parisienne: 'Parisienne', 'Great Vibes', cursive;
+  --font-script-alex: 'Alex Brush', cursive;
+  --font-sans-montserrat: 'Montserrat', sans-serif;
+  --font-sans-outfit: 'Outfit', sans-serif;
+}

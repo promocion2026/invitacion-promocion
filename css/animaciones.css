@@ -1,0 +1,382 @@
+/* ==========================================================================
+   ANIMACIONES.CSS - EFECTOS Y TRANSICIONES VISUALES
+   ========================================================================== */
+
+/* --- Entrada progresiva escalonada (Staggered Intro Animations) --- */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes envelopeEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Clases para animación escalonada de entrada */
+.anim-intro-bg {
+  animation: fadeInScale 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-intro-crest {
+  opacity: 0;
+  animation: slideDownFade 1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-intro-header {
+  opacity: 0;
+  animation: slideDownFade 1s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-intro-envelope {
+  opacity: 0;
+  animation: envelopeEntrance 1.2s 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-intro-cta {
+  opacity: 0;
+  animation: slideUpFade 1s 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Brillo / Destello continuo sobre el sello de lacre (Wax Seal Gleam) --- */
+@keyframes sealGleam {
+  0%, 100% {
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 0px rgba(223, 201, 165, 0));
+  }
+  50% {
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 16px rgba(245, 228, 188, 0.7));
+  }
+}
+
+.anim-seal-gleam {
+  animation: sealGleam 3.5s infinite ease-in-out;
+}
+
+/* --- Resplandor suave del halo detrás del sobre --- */
+@keyframes haloPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+.anim-halo-pulse {
+  animation: haloPulse 5s infinite ease-in-out;
+}
+
+/* --- Animación de respiración / pulso para el botón de abrir --- */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.92;
+    text-shadow: 0 0 10px rgba(223, 201, 165, 0.4), 0 0 20px rgba(123, 22, 53, 0.3);
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+    text-shadow: 0 0 18px rgba(255, 235, 170, 0.85), 0 0 28px rgba(223, 201, 165, 0.6);
+  }
+}
+
+.anim-pulse-glow {
+  animation: pulseGlow 2.8s infinite ease-in-out;
+}
+
+/* --- Indicador de flecha/cursor flotante --- */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.anim-float-indicator {
+  animation: floatUpDown 2s infinite ease-in-out;
+}
+
+/* --- Animaciones del Sobre 3D --- */
+.envelope-wrapper {
+  perspective: 1400px;
+}
+
+.envelope-wrapper.open .envelope-flap-top {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope-letter {
+  transition: transform 1.25s 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s 0.3s, visibility 0s 0.3s;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.envelope-wrapper.open .envelope-letter {
+  transform: translateX(-50%) translateY(-102px) rotate(-1.5deg);
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .envelope-wrapper.open .envelope-letter {
+    transform: translateX(-50%) translateY(-140px) rotate(-1.5deg);
+    z-index: 2;
+  }
+}
+
+.wax-seal-btn {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
+}
+
+.envelope-wrapper.open .wax-seal-btn {
+  transform: translate(-50%, -39%) scale(1.25);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Destellos luminosos del interior (Sparkles) --- */
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(223, 201, 165, 0.8), 0 0 16px rgba(255, 255, 255, 0.6);
+  animation: sparkleTwinkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes sparkleTwinkle {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+}
+
+/* --- Transición para ocultar la portada del sobre --- */
+#envelopeScreen {
+  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
+}
+
+#envelopeScreen.revealed {
+  opacity: 0;
+  transform: scale(1.05);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* --- Animaciones de entrada al hacer scroll (Reveal) --- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* --- Animación de las barras del ecualizador de música --- */
+@keyframes waveAnimation {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 28px;
+  }
+}
+
+.waveform-bar {
+  display: inline-block;
+  width: 3px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #dfc9a5;
+  transition: height 0.2s ease, background-color 0.3s;
+}
+
+.waveform-playing .waveform-bar:nth-child(1) { animation: waveAnimation 1.2s infinite ease-in-out; }
+.waveform-playing .waveform-bar:nth-child(2) { animation: waveAnimation 0.9s infinite ease-in-out 0.1s; }
+.waveform-playing .waveform-bar:nth-child(3) { animation: waveAnimation 1.4s infinite ease-in-out 0.2s; }
+.waveform-playing .waveform-bar:nth-child(4) { animation: waveAnimation 0.8s infinite ease-in-out 0.15s; }
+.waveform-playing .waveform-bar:nth-child(5) { animation: waveAnimation 1.5s infinite ease-in-out 0.3s; }
+.waveform-playing .waveform-bar:nth-child(6) { animation: waveAnimation 1.1s infinite ease-in-out 0.25s; }
+.waveform-playing .waveform-bar:nth-child(7) { animation: waveAnimation 1.3s infinite ease-in-out 0.05s; }
+.waveform-playing .waveform-bar:nth-child(8) { animation: waveAnimation 0.7s infinite ease-in-out 0.35s; }
+.waveform-playing .waveform-bar:nth-child(9) { animation: waveAnimation 1.4s infinite ease-in-out 0.1s; }
+.waveform-playing .waveform-bar:nth-child(10) { animation: waveAnimation 1.0s infinite ease-in-out 0.2s; }
+.waveform-playing .waveform-bar:nth-child(11) { animation: waveAnimation 1.6s infinite ease-in-out 0.15s; }
+.waveform-playing .waveform-bar:nth-child(12) { animation: waveAnimation 0.9s infinite ease-in-out 0.3s; }
+.waveform-playing .waveform-bar:nth-child(13) { animation: waveAnimation 1.3s infinite ease-in-out 0.05s; }
+.waveform-playing .waveform-bar:nth-child(14) { animation: waveAnimation 1.1s infinite ease-in-out 0.25s; }
+.waveform-playing .waveform-bar:nth-child(15) { animation: waveAnimation 0.8s infinite ease-in-out 0.18s; }
+.waveform-playing .waveform-bar:nth-child(16) { animation: waveAnimation 1.4s infinite ease-in-out 0.28s; }
+.waveform-playing .waveform-bar:nth-child(17) { animation: waveAnimation 1.0s infinite ease-in-out 0.12s; }
+.waveform-playing .waveform-bar:nth-child(18) { animation: waveAnimation 1.5s infinite ease-in-out 0.22s; }
+
+/* --- Flotación suave de las fotos polaroid --- */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-4px) rotate(var(--rot, 0deg));
+  }
+}
+
+.polaroid-float {
+  animation: subtleFloat 5s ease-in-out infinite;
+}
+
+/* --- Partículas luminosas que flotan y brillan suavemente --- */
+@keyframes particleDrift {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-25px) translateX(8px) scale(1.2);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-50px) translateX(-5px) scale(0.8);
+    opacity: 0.15;
+  }
+}
+
+.luminous-particle {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  animation: particleDrift 6s infinite ease-in-out;
+  will-change: transform, opacity;
+}
+
+/* --- Desplazamiento lento del gradiente de fondo de gala --- */
+@keyframes luxuryGradientShift {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
+/* --- Movimiento lento de orbes luminosos difusos --- */
+@keyframes orbDrift1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(45px, 60px) scale(1.15);
+  }
+  100% {
+    transform: translate(-30px, 90px) scale(0.95);
+  }
+}
+
+@keyframes orbDrift2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-60px, -50px) scale(1.2);
+  }
+  100% {
+    transform: translate(30px, -80px) scale(0.9);
+  }
+}
+
+@keyframes orbDrift3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -40px) scale(1.1);
+  }
+  100% {
+    transform: translate(-40px, 30px) scale(0.95);
+  }
+}
+
+/* --- Pulso de brillo en los dos puntos del contador --- */
+@keyframes colonPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* --- Giro del disco de vinilo al reproducir --- */
+@keyframes vinylSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.anim-vinyl-spin {
+  animation: vinylSpin 5s linear infinite;
+}

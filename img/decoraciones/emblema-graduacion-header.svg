@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="100%" height="100%">
+  <defs>
+    <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="35%" stop-color="#e9d39c"/>
+      <stop offset="70%" stop-color="#c59b4c"/>
+      <stop offset="100%" stop-color="#785317"/>
+    </linearGradient>
+    <linearGradient id="capDarkWine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d0717"/>
+      <stop offset="100%" stop-color="#140207"/>
+    </linearGradient>
+    <filter id="crestShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#crestShadow)">
+    <!-- Laurel Wreath Leaves - Left side -->
+    <g fill="url(#crestGold)">
+      <!-- Leaf pairs -->
+      <path d="M72,126 C58,124 45,116 35,104 C39,99 47,101 46,108 Z"/>
+      <path d="M36,104 C28,92 23,78 23,64 C28,62 34,66 31,73 Z"/>
+      <path d="M23,64 C24,49 32,36 43,26 C46,31 43,38 37,41 Z"/>
+      <path d="M43,26 C54,18 67,14 80,14 C78,19 72,22 66,21 Z"/>
+      <!-- Individual leaves left -->
+      <path d="M40,115 C30,107 26,98 25,92 C32,92 36,98 40,115 Z"/>
+      <path d="M25,85 C19,76 17,66 18,58 C24,60 27,68 25,85 Z"/>
+      <path d="M22,50 C20,40 23,30 28,23 C33,28 32,37 22,50 Z"/>
+    </g>
+
+    <!-- Laurel Wreath Leaves - Right side (Mirrored) -->
+    <g fill="url(#crestGold)" transform="translate(160, 0) scale(-1, 1)">
+      <path d="M72,126 C58,124 45,116 35,104 C39,99 47,101 46,108 Z"/>
+      <path d="M36,104 C28,92 23,78 23,64 C28,62 34,66 31,73 Z"/>
+      <path d="M23,64 C24,49 32,36 43,26 C46,31 43,38 37,41 Z"/>
+      <path d="M43,26 C54,18 67,14 80,14 C78,19 72,22 66,21 Z"/>
+      <path d="M40,115 C30,107 26,98 25,92 C32,92 36,98 40,115 Z"/>
+      <path d="M25,85 C19,76 17,66 18,58 C24,60 27,68 25,85 Z"/>
+      <path d="M22,50 C20,40 23,30 28,23 C33,28 32,37 22,50 Z"/>
+    </g>
+
+    <!-- Bottom Ribbon Tie -->
+    <path d="M72,124 C76,121 84,121 88,124 C86,132 82,135 80,138 C78,135 74,132 72,124 Z" fill="url(#crestGold)"/>
+    <path d="M72,128 C64,132 58,137 54,142 L66,136 L64,131 Z" fill="url(#crestGold)"/>
+    <path d="M88,128 C96,132 102,137 106,142 L94,136 L96,131 Z" fill="url(#crestGold)"/>
+
+    <!-- Center Graduation Mortarboard / Birrete -->
+    <!-- Cap top diamond -->
+    <polygon points="80,38 122,56 80,72 38,56" fill="url(#capDarkWine)" stroke="url(#crestGold)" stroke-width="2"/>
+    <!-- Highlight inner rim -->
+    <polygon points="80,43 114,56 80,68 46,56" fill="none" stroke="#fff8dc" stroke-width="0.8" opacity="0.6"/>
+    <!-- Skull cap base -->
+    <path d="M52,62 L52,78 C52,90 108,90 108,78 L108,62 C99,69 89,72 80,72 C71,72 61,69 52,62 Z" fill="url(#capDarkWine)" stroke="url(#crestGold)" stroke-width="1.4"/>
+    <!-- Center button -->
+    <circle cx="80" cy="55" r="4" fill="url(#crestGold)"/>
+    <!-- Tassel cord & brush -->
+    <path d="M80,55 Q102,56 112,74 L116,98" fill="none" stroke="url(#crestGold)" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="113,97 119,98 122,112 110,112" fill="url(#crestGold)"/>
+
+    <!-- Small 5-point star on top -->
+    <polygon points="80,12 82,18 88,18 83,22 85,28 80,24 75,28 77,22 72,18 78,18" fill="url(#crestGold)"/>
+  </g>
+</svg>
