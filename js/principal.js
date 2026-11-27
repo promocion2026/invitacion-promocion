@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.reproductorGraduacion.play();
     }
 
-    // 3. Tras la animación de salida de la carta, permitir apreciar la tarjeta y desvanecer la pantalla del sobre
+    // 3. Dejar que la carta salga y pueda leerse antes de mostrar la invitación
     setTimeout(() => {
       if (envelopeScreen) {
         envelopeScreen.classList.add('revealed');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Activar animaciones de secciones visibles y destellos interiores
       iniciarObservadorScroll();
       crearDestellosFondo();
-    }, 2000);
+    }, 6500);
   }
 
   // Eventos de apertura en el sello y en el botón/texto "CLICK PARA ABRIR..."
@@ -122,28 +122,60 @@ document.addEventListener('DOMContentLoaded', () => {
       
       contenedor.appendChild(particula);
     }
+
   }
 
-  // Destellos para la sección interior
+  // Estrellas brillantes y luces en movimiento para el fondo interior
   function crearDestellosFondo() {
     const contenedor = document.getElementById('sparklesContainer');
     if (!contenedor) return;
 
-    const cantidad = 18;
-    for (let i = 0; i < cantidad; i++) {
-      const sparkle = document.createElement('div');
-      sparkle.className = 'sparkle';
-      const size = Math.random() * 4 + 2;
-      sparkle.style.width = `${size}px`;
-      sparkle.style.height = `${size}px`;
-      sparkle.style.left = `${Math.random() * 100}%`;
-      sparkle.style.top = `${Math.random() * 100}%`;
-      sparkle.style.animationDelay = `${Math.random() * 4}s`;
-      sparkle.style.animationDuration = `${Math.random() * 3 + 2.5}s`;
-      sparkle.style.backgroundColor = i % 2 === 0 ? '#dfc9a5' : '#ffffff';
-      sparkle.style.borderRadius = '50%';
-      sparkle.style.boxShadow = `0 0 ${size * 2}px ${sparkle.style.backgroundColor}`;
-      contenedor.appendChild(sparkle);
+    const totalElementos = 52;
+    const colores = ['#fff8db', '#f5e6b2', '#d4af37', '#ffffff'];
+
+    for (let i = 0; i < totalElementos; i++) {
+      const elem = document.createElement('div');
+      const tipo = i % 5;
+      const color = colores[i % colores.length];
+      const dx = (Math.random() * 44 - 22).toFixed(1) + 'px';
+      const dy = (Math.random() * 50 - 25).toFixed(1) + 'px';
+
+      elem.style.left = `${Math.random() * 98 + 1}%`;
+      elem.style.top = `${Math.random() * 98 + 1}%`;
+      elem.style.animationDelay = `${(Math.random() * 5).toFixed(2)}s`;
+      elem.style.setProperty('--dx', dx);
+      elem.style.setProperty('--dy', dy);
+
+      if (tipo === 0 || tipo === 1) {
+        // Estrellas brillantes de 4 puntas que parpadean, rotan y se mueven
+        const size = Math.random() * 10 + 7;
+        elem.className = 'star-sparkle';
+        elem.style.width = `${size}px`;
+        elem.style.height = `${size}px`;
+        elem.style.background = `radial-gradient(circle, #ffffff 10%, ${color} 70%)`;
+        elem.style.filter = `drop-shadow(0 0 ${Math.round(size * 0.7)}px ${color})`;
+        elem.style.setProperty('--dur', `${(Math.random() * 3 + 3.2).toFixed(2)}s`);
+      } else if (tipo === 2) {
+        // Luces ambientales pequeñas que flotan y parpadean
+        const size = Math.random() * 8 + 5;
+        elem.className = 'moving-light-orb';
+        elem.style.width = `${size}px`;
+        elem.style.height = `${size}px`;
+        elem.style.backgroundColor = color;
+        elem.style.boxShadow = `0 0 ${size * 3}px ${color}, 0 0 ${size * 1.4}px rgba(212, 175, 55, 0.8)`;
+        elem.style.setProperty('--dur', `${(Math.random() * 4 + 6).toFixed(2)}s`);
+      } else {
+        // Puntos de luz y destellos dorados
+        const size = Math.random() * 4 + 2.5;
+        elem.className = 'sparkle';
+        elem.style.width = `${size}px`;
+        elem.style.height = `${size}px`;
+        elem.style.backgroundColor = color;
+        elem.style.boxShadow = `0 0 ${size * 2.5}px ${color}, 0 0 ${size * 4}px rgba(223, 201, 165, 0.6)`;
+        elem.style.setProperty('--dur', `${(Math.random() * 3 + 3.5).toFixed(2)}s`);
+      }
+
+      contenedor.appendChild(elem);
     }
   }
 

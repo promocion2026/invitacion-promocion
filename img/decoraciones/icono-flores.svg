@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <radialGradient id="flowerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7B1E3A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D6"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8C651D"/>
+    </linearGradient>
+    <linearGradient id="roseWine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B02247"/>
+      <stop offset="50%" stop-color="#7A132F"/>
+      <stop offset="100%" stop-color="#450819"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="54" fill="url(#flowerGlow)"/>
+
+  <!-- Envoltorio / Cono del ramo en papel negro y dorado -->
+  <path d="M36 56 L60 100 L84 56 Z" fill="#1F040C" stroke="url(#goldLeaf)" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M43 58 L60 93 L77 58" stroke="url(#goldLeaf)" stroke-width="1" opacity="0.45" fill="none"/>
+
+  <!-- Hojas doradas laterales -->
+  <path d="M36 52 C24 44, 24 32, 36 36 C40 42, 42 48, 36 52 Z" fill="url(#goldLeaf)" opacity="0.85"/>
+  <path d="M84 52 C96 44, 96 32, 84 36 C80 42, 78 48, 84 52 Z" fill="url(#goldLeaf)" opacity="0.85"/>
+  <path d="M60 26 C55 16, 65 16, 60 26 Z" fill="url(#goldLeaf)" opacity="0.9"/>
+
+  <!-- Rosa izquierda -->
+  <circle cx="44" cy="46" r="12" fill="url(#roseWine)" stroke="url(#goldLeaf)" stroke-width="1.4"/>
+  <path d="M39 46 C41 41, 47 41, 49 46 C47 50, 41 50, 39 46 Z" stroke="#F5E6B2" stroke-width="1" fill="none" opacity="0.7"/>
+
+  <!-- Rosa derecha -->
+  <circle cx="76" cy="46" r="12" fill="url(#roseWine)" stroke="url(#goldLeaf)" stroke-width="1.4"/>
+  <path d="M71 46 C73 41, 79 41, 81 46 C79 50, 73 50, 71 46 Z" stroke="#F5E6B2" stroke-width="1" fill="none" opacity="0.7"/>
+
+  <!-- Rosa central protagonista -->
+  <circle cx="60" cy="38" r="15" fill="url(#roseWine)" stroke="url(#goldLeaf)" stroke-width="1.8"/>
+  <path d="M53 38 C55 32, 65 32, 67 38 C64 44, 56 44, 53 38 Z" stroke="url(#goldLeaf)" stroke-width="1.2" fill="none"/>
+  <circle cx="60" cy="38" r="3.5" fill="#F5E6B2" opacity="0.85"/>
+
+  <!-- Lazo dorado atando el ramo -->
+  <path d="M51 74 Q60 78 69 74" stroke="url(#goldLeaf)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M60 76 L54 88 M60 76 L66 88" stroke="url(#goldLeaf)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="60" cy="76" r="3" fill="#FFF5D6"/>
+
+  <!-- Destellos -->
+  <g transform="translate(26, 26)">
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#FFF5D6" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#FFF5D6" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(94, 24)">
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#D4AF37" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#D4AF37" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+</svg>

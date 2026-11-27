@@ -132,7 +132,8 @@
               </div>
 
               <!-- Nombre de la Estudiante -->
-              <p class="font-script-title text-2xl md:text-3xl text-rose-900 font-bold leading-tight mt-0.5 drop-shadow-sm">
+              <p
+                class="font-script-title text-2xl md:text-3xl text-rose-900 font-bold leading-tight mt-0.5 drop-shadow-sm">
                 Paloma Martel
               </p>
 
@@ -209,6 +210,7 @@
     <div class="ambient-orb ambient-orb-1" aria-hidden="true"></div>
     <div class="ambient-orb ambient-orb-2" aria-hidden="true"></div>
     <div class="ambient-orb ambient-orb-3" aria-hidden="true"></div>
+    <div class="ambient-orb ambient-orb-4" aria-hidden="true"></div>
 
     <!-- Filigranas ornamentales fijas en las esquinas superiores del interior -->
     <div class="absolute top-4 left-4 w-10 h-10 opacity-30 pointer-events-none z-1" aria-hidden="true">
@@ -504,7 +506,8 @@
            TARJETÓN IMPRESO DE GALA (Fecha, Hora, Ubicación y Asistencia)
            ======================================================================= -->
       <div
-        class="stationery-card mt-8 pt-10 pb-12 px-6 md:px-10 text-neutral-800 flex flex-col items-center text-center fade-in-section delay-300">
+        class="stationery-card stationery-card-top soft-float mt-8 pt-10 pb-10 px-6 md:px-10 text-neutral-800 flex flex-col items-center text-center fade-in-section delay-300"
+        style="animation-delay: 1.2s;">
 
         <!-- Marco interior dorado con esquinas ornamentales -->
         <div class="stationery-frame-inner" aria-hidden="true"></div>
@@ -529,10 +532,10 @@
           <div class="stationery-badge w-full py-3.5 px-4 mt-3">
             <p
               class="font-serif-display text-[11px] md:text-xs font-bold tracking-[0.22em] uppercase text-amber-900/80 mb-0.5">
-              VIERNES
+              DOMINGO
             </p>
             <p class="font-serif-display text-2xl md:text-3xl font-extrabold text-neutral-900 tracking-wider">
-              18 DE DICIEMBRE
+              13 DE DICIEMBRE
             </p>
             <p
               class="font-serif-display text-xs md:text-sm font-semibold tracking-[0.16em] uppercase text-neutral-600 mt-0.5">
@@ -565,13 +568,13 @@
           <!-- Placa de Horario Estilizada -->
           <div class="stationery-badge w-full py-3.5 px-4 mt-3">
             <p class="font-serif-display text-2xl md:text-3xl font-extrabold text-neutral-900 tracking-wider">
-              8:00 PM
+              7:00 PM
             </p>
             <p class="font-serif-body italic text-xs md:text-sm text-neutral-600 mt-1">
-              Recepción e ingreso de invitados: 7:30 PM
+              Inicio de nuestra gran noche de celebración
             </p>
             <p class="font-sans-ui text-[10px] md:text-[11px] text-neutral-500 mt-0.5 uppercase tracking-wider">
-              Brindis y celebración: 10:00 PM
+              Brindis de Honor: 10:00 PM
             </p>
           </div>
         </section>
@@ -600,18 +603,12 @@
           <!-- Placa de Ubicación Estilizada -->
           <div class="stationery-badge w-full py-3.5 px-4 mt-3 mb-4">
             <p class="font-serif-display text-base md:text-lg font-bold text-neutral-900 tracking-wide">
-              Auditorio Principal de Convenciones
-            </p>
-            <p class="font-sans-ui text-xs md:text-sm font-semibold text-neutral-700 mt-1">
-              Av. Los Jazmines 187, Lima
-            </p>
-            <p class="font-serif-body italic text-[11px] md:text-xs text-neutral-500 mt-0.5">
-              Salón Gran Magnolio · Frente al Coliseo Deportivo "UBA"
+              Local de Recepciones "OSCAR"
             </p>
           </div>
 
           <!-- Botón Google Maps de Gala con Icono y Flecha -->
-          <a href="https://maps.google.com/?q=Los+Jazmines+187+Lima" target="_blank" rel="noopener noreferrer"
+          <a href="https://maps.app.goo.gl/VxrhQEwxTJfYp1xX8" target="_blank" rel="noopener noreferrer"
             class="btn-gold-maps" aria-label="Abrir dirección en Google Maps">
             <svg class="w-4 h-4 text-champan" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -625,10 +622,155 @@
           </a>
         </section>
 
-        <!-- Divisor fino entre secciones -->
-        <div class="w-36 md:w-48 h-2 mx-auto mb-9 opacity-65">
+      </div>
+
+      <!-- =======================================================================
+           F2. CÓDIGO DE VESTIMENTA (DRESS CODE - Fondo Oscuro & Bordes Dorados)
+           ======================================================================= -->
+      <section id="dressCodeSection"
+        class="py-10 px-5 md:px-8 flex flex-col items-center text-center relative z-10 fade-in-section">
+
+        <!-- Separador ornamental superior -->
+        <div class="w-40 md:w-52 h-2.5 mx-auto mb-5 opacity-80">
           <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
         </div>
+
+        <!-- Icono de Gala Dress Code -->
+        <div
+          class="w-16 h-16 md:w-20 md:h-20 mb-2 drop-shadow-[0_4px_18px_rgba(212,175,55,0.45)] hover:scale-105 transition-transform duration-300">
+          <img src="img/decoraciones/icono-dresscode.svg" alt="Código de Vestimenta"
+            class="w-full h-full object-contain">
+        </div>
+
+        <h2
+          class="font-serif-display text-2xl md:text-3xl font-bold tracking-[0.22em] uppercase text-foil-gold drop-shadow-md">
+          DRESS CODE
+        </h2>
+        <p class="font-script-subtitle text-2xl md:text-3xl text-champan/90 mt-1 mb-6">
+          Elegancia para una noche especial
+        </p>
+
+        <!-- Dos tarjetas visuales: Damas y Varones -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full max-w-md md:max-w-lg mx-auto">
+
+          <!-- Tarjeta DAMAS -->
+          <article class="luxury-dark-card p-4 flex flex-col items-center">
+            <div class="dresscode-photo-wrap w-full aspect-[3/4] bg-neutral-950 mb-3.5">
+              <img src="img/vestimenta/damas.jpg" alt="Referencia de vestido elegante para damas"
+                class="w-full h-full object-cover object-top">
+            </div>
+            <h3 class="font-serif-display text-base md:text-lg font-bold tracking-[0.2em] text-foil-gold uppercase">
+              DAMAS
+            </h3>
+            <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-champan/60 to-transparent my-2"></div>
+            <p class="font-serif-body italic text-sm md:text-base text-champan/90">
+              Vestido elegante
+            </p>
+          </article>
+
+          <!-- Tarjeta VARONES -->
+          <article class="luxury-dark-card p-4 flex flex-col items-center">
+            <div class="dresscode-photo-wrap w-full aspect-[3/4] bg-neutral-950 mb-3.5">
+              <img src="img/vestimenta/varones.jpg" alt="Referencia de terno formal para varones"
+                class="w-full h-full object-cover object-top">
+            </div>
+            <h3 class="font-serif-display text-base md:text-lg font-bold tracking-[0.2em] text-foil-gold uppercase">
+              VARONES
+            </h3>
+            <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-champan/60 to-transparent my-2"></div>
+            <p class="font-serif-body italic text-sm md:text-base text-champan/90">
+              Terno formal
+            </p>
+          </article>
+
+        </div>
+
+        <!-- Frase final de Dress Code -->
+        <p class="font-serif-body italic text-sm md:text-base text-champan/85 mt-6 max-w-md leading-relaxed">
+          “¡Vistamos nuestras mejores galas para celebrar juntos!”
+        </p>
+
+      </section>
+
+      <!-- =======================================================================
+           F3. SECCIÓN DE REGALOS (UN DETALLE ESPECIAL)
+           ======================================================================= -->
+      <section id="regalosSection"
+        class="pt-4 pb-10 px-5 md:px-8 flex flex-col items-center text-center relative z-10 fade-in-section">
+
+        <!-- Separador ornamental intermedio -->
+        <div class="w-44 md:w-56 h-2.5 mx-auto mb-6 opacity-80">
+          <img src="img/decoraciones/divisor-ornamental.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <h2
+          class="font-serif-display text-2xl md:text-3xl font-bold tracking-[0.2em] uppercase text-foil-gold drop-shadow-md">
+          UN DETALLE ESPECIAL
+        </h2>
+
+        <p class="font-serif-body italic text-sm md:text-base text-champan/85 mt-2.5 mb-7 max-w-md leading-relaxed">
+          Tu presente es obligatorio para completar tu registro. Sin él, lamentablemente no podremos confirmar tu participación. 
+          Estas son las opciones que recibiremos con mucho cariño.
+        </p>
+
+        <!-- Tres tarjetas visuales de regalo -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-lg mx-auto">
+
+          <!-- Tarjeta YAPE -->
+          <div class="luxury-dark-card p-5 flex flex-col items-center text-center">
+            <div class="w-16 h-16 mb-3 drop-shadow-[0_4px_12px_rgba(212,175,55,0.4)]">
+              <img src="img/decoraciones/icono-yape.svg" alt="Yape en soles" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-serif-display text-sm font-bold tracking-[0.18em] text-foil-gold uppercase">
+              YAPE
+            </h3>
+            <div class="w-12 h-[1px] bg-gradient-to-r from-transparent via-rose-500/60 to-transparent my-2"></div>
+            <p class="font-serif-body text-xs md:text-sm text-champan/85 leading-relaxed">
+              Recibimos Yape en soles.
+            </p>
+          </div>
+
+          <!-- Tarjeta EFECTIVO -->
+          <div class="luxury-dark-card p-5 flex flex-col items-center text-center">
+            <div class="w-16 h-16 mb-3 drop-shadow-[0_4px_12px_rgba(212,175,55,0.4)]">
+              <img src="img/decoraciones/icono-efectivo.svg" alt="Regalos en efectivo"
+                class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-serif-display text-sm font-bold tracking-[0.18em] text-foil-gold uppercase">
+              EFECTIVO
+            </h3>
+            <div class="w-12 h-[1px] bg-gradient-to-r from-transparent via-rose-500/60 to-transparent my-2"></div>
+            <p class="font-serif-body text-xs md:text-sm text-champan/85 leading-relaxed">
+              También recibimos regalos en efectivo (soles).
+            </p>
+          </div>
+
+          <!-- Tarjeta RAMOS DE FLORES -->
+          <div class="luxury-dark-card p-5 flex flex-col items-center text-center">
+            <div class="w-16 h-16 mb-3 drop-shadow-[0_4px_12px_rgba(212,175,55,0.4)]">
+              <img src="img/decoraciones/icono-flores.svg" alt="Ramos de flores" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-serif-display text-sm font-bold tracking-[0.18em] text-foil-gold uppercase">
+              RAMOS DE FLORES
+            </h3>
+            <div class="w-12 h-[1px] bg-gradient-to-r from-transparent via-rose-500/60 to-transparent my-2"></div>
+            <p class="font-serif-body text-xs md:text-sm text-champan/85 leading-relaxed">
+              Los ramos de flores serán recibidos con mucho cariño.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =======================================================================
+           TARJETÓN IMPRESO INFERIOR (Confirmación de Asistencia y Despedida)
+           ======================================================================= -->
+      <div
+        class="stationery-card mt-2 pt-10 pb-12 px-6 md:px-10 text-neutral-800 flex flex-col items-center text-center fade-in-section delay-300">
+
+        <!-- Marco interior dorado con esquinas ornamentales -->
+        <div class="stationery-frame-inner" aria-hidden="true"></div>
 
         <!-- =====================================================================
              G. CONFIRMACIÓN DE ASISTENCIA (Botón de Gala Trigger de RSVP)
@@ -678,7 +820,8 @@
             ¡Hasta esa noche, Paloma!
           </p>
           <p class="font-serif-body italic text-xs md:text-sm text-neutral-600 max-w-xs leading-relaxed mb-4">
-            Gracias a nuestros padres, maestros y familiares por acompañar a <strong>Paloma Martel</strong> en cada paso de este camino. Los esperamos en nuestra gran noche de celebración.
+            Gracias a nuestros padres, maestros y familiares por acompañar a <strong>Paloma Martel</strong> en cada paso
+            de este camino. Los esperamos en nuestra gran noche de celebración.
           </p>
 
           <!-- Enlace Volver al inicio -->
@@ -734,7 +877,8 @@
             ¡Únete a la celebración!
           </h3>
           <p class="font-sans-ui text-xs text-champan/80 mt-1 leading-relaxed">
-            Queremos celebrar esta gran noche contigo. Confirma tu asistencia a la Fiesta de Promoción de <strong>Paloma Martel</strong> · <strong>KINTSUGI 2026</strong> antes del 15 de diciembre.
+            Queremos celebrar esta gran noche contigo. Confirma tu asistencia a la Fiesta de Promoción de <strong>Paloma
+              Martel</strong> · <strong>KINTSUGI 2026</strong> antes del 15 de diciembre.
           </p>
         </div>
 

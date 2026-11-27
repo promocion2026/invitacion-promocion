@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <radialGradient id="yapeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7B1E3A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldYape" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D6"/>
+      <stop offset="35%" stop-color="#D4AF37"/>
+      <stop offset="70%" stop-color="#9A7222"/>
+      <stop offset="100%" stop-color="#DFC8A0"/>
+    </linearGradient>
+    <linearGradient id="darkPhone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B0611"/>
+      <stop offset="100%" stop-color="#0D0104"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="54" fill="url(#yapeGlow)"/>
+
+  <!-- Smartphone de Gala -->
+  <rect x="34" y="18" width="52" height="84" rx="10" fill="url(#darkPhone)" stroke="url(#goldYape)" stroke-width="2.5"/>
+  <rect x="38" y="24" width="44" height="68" rx="6" fill="#1A0309" stroke="#D4AF37" stroke-opacity="0.35" stroke-width="1"/>
+  <!-- Auricular superior -->
+  <rect x="52" y="20.5" width="16" height="2" rx="1" fill="url(#goldYape)" opacity="0.8"/>
+
+  <!-- Símbolo central de transferencia / Soles (S/) en círculo dorado -->
+  <circle cx="60" cy="54" r="16" fill="#3B0917" stroke="url(#goldYape)" stroke-width="2"/>
+  <text x="60" y="60" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="16" fill="url(#goldYape)">S/</text>
+
+  <!-- Ondas sutiles de pago instantáneo -->
+  <path d="M48 78 Q60 72 72 78" stroke="url(#goldYape)" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path d="M52 83 Q60 79 68 83" stroke="url(#goldYape)" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+  <!-- Destellos -->
+  <g transform="translate(92, 26)">
+    <line x1="0" y1="-6" x2="0" y2="6" stroke="#FFF5D6" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-6" y1="0" x2="6" y2="0" stroke="#FFF5D6" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(26, 86)">
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#D4AF37" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#D4AF37" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+</svg>

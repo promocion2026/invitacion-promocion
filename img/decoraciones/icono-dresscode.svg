@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <radialGradient id="dcGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7B1E3A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldDC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D6"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8C651D"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="54" fill="url(#dcGlow)"/>
+
+  <!-- Gancho de percha elegante / Corbatín de gala -->
+  <path d="M60 22 C60 15, 68 15, 68 21 C68 25, 60 27, 60 32" stroke="url(#goldDC)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M24 52 L60 32 L96 52 C98 53.5, 97 57, 93 57 L27 57 C23 57, 22 53.5, 24 52 Z" fill="#2A0712" stroke="url(#goldDC)" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- Corbatín (Bowtie) elegante debajo -->
+  <g transform="translate(60, 78)">
+    <path d="M-24 -10 L-4 -3 L-4 3 L-24 10 Z" fill="#4A0D1F" stroke="url(#goldDC)" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M24 -10 L4 -3 L4 3 L24 10 Z" fill="#4A0D1F" stroke="url(#goldDC)" stroke-width="1.8" stroke-linejoin="round"/>
+    <rect x="-5" y="-5" width="10" height="10" rx="2.5" fill="url(#goldDC)"/>
+  </g>
+
+  <!-- Destellos -->
+  <g transform="translate(26, 30)">
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#FFF5D6" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#FFF5D6" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(94, 30)">
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#D4AF37" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#D4AF37" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+</svg>

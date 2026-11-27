@@ -104,8 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const textoMsg = encodeURIComponent(
           `¡Hola! Confirmo mi asistencia para la Fiesta de Promoción de Paloma Martel · KINTSUGI 2026:\n- Nombre: ${nombre}\n- Asistencia: ${asistencia === 'si' ? 'Sí asistiré 🎉' : 'No podré asistir'}\n- Acompañantes: ${asistencia === 'si' ? acompanantes : '0'}${dedicatoria ? `\n- Mensaje: ${dedicatoria}` : ''}`
         );
-        btnWhatsapp.href = `https://api.whatsapp.com/send?text=${textoMsg}`;
+        btnWhatsapp.href = `https://wa.me/51921664150?text=${textoMsg}`;
         btnWhatsapp.classList.remove('hidden');
+        window.open(btnWhatsapp.href, '_blank', 'noopener,noreferrer');
       }
     });
   }
